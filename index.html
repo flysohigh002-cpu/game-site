@@ -39,7 +39,7 @@ const SITE_IMAGES = {
 
     background: "background.png", // 固定背景圖
 
-   hero1: "YOUR_HERO_IMAGE_1",
+    hero1: "YOUR_HERO_IMAGE_1",
     hero2: "YOUR_HERO_IMAGE_2",
     hero3: "YOUR_HERO_IMAGE_3",
 
@@ -168,7 +168,7 @@ header.solid{background:rgba(20,12,7,.92)}
 .feat p{color:var(--mute);font-size:15px}
 
 /* 活動 Banner */
-.banner{position:relative;min-height:440px;display:flex;align-items:center;border:1px solid var(--line);overflow:hidden}
+.banner{position:relative;width:100%;aspect-ratio:16/9;min-height:0;display:flex;align-items:center;border:1px solid var(--line);overflow:hidden}
 .banner .ph{position:absolute;inset:0}
 .banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,12,7,.9),rgba(20,12,7,.2))}
 .banner-body{position:relative;z-index:2;padding:48px;max-width:560px}
@@ -378,108 +378,22 @@ section:not(.features){
   .drawer .auth .btn{flex:1;min-height:48px}
 }
 @media (max-width:768px){
-
-  section{
-    padding:64px 0;
+  .banner{
+    aspect-ratio:16 / 9;
+    min-height:0;
   }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  /* 手機 Hero 縮短，不再吃滿整個螢幕 */
-  .hero{
-    min-height:548px;
-    height:548px;
-    align-items:flex-end;
-    padding-bottom:105px;
-  }
-
-  .hero::after{
-    background:
-      linear-gradient(
-        0deg,
-        rgba(20,12,7,.98) 10%,
-        rgba(20,12,7,.78) 38%,
-        rgba(20,12,7,.35) 72%,
-        rgba(20,12,7,.2) 100%
-      );
-  }
-
-  /* 讓文字區再往上一點 */
-  .hero-body{
-    padding-top:0;
-    padding-bottom:10px;
-  }
-
-  .hero-game{
-    margin-bottom:12px;
-  }
-
-  .hero h1{
-    font-size:clamp(38px,10vw,54px);
-    line-height:1.08;
-    max-width:100%;
-  }
-
-  .hero p{
-    margin:16px 0 24px;
-    font-size:15px;
-  }
-
-  .hero-btns{
-    gap:10px;
-  }
-
-  .hero-btns .btn{
-    flex:1;
-    min-height:48px;
-    padding:0 16px;
-  }
-
-  .hero-ctrl{
-    left:20px;
-    right:20px;
-    bottom:28px;
-    justify-content:space-between;
-  }
-
-  .arrow{
-    width:48px;
-    height:48px;
-  }
-
-  .feat-grid{
-    grid-template-columns:1fr;
-  }
-
-  .feat,
-  .feat:nth-child(2){
-    border:0;
-    margin:0;
-    padding:0;
-  }
-
-  .banner-body{
-    padding:32px 24px;
-  }
-
-  .news li a{
-    gap:16px;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .tabs{
-    flex-wrap:nowrap;
-    overflow-x:auto;
-    width:100%;
-    padding-bottom:4px;
-  }
-
-  .tab{
-    flex:none;
-  }
+  section{padding:64px 0}
+  .grid{grid-template-columns:1fr}
+  .hero{align-items:flex-end;padding-bottom:110px}
+  .hero::after{background:linear-gradient(0deg,rgba(20,12,7,.95) 20%,rgba(20,12,7,.4) 70%,rgba(20,12,7,.25))}
+  .hero-ctrl{left:20px;right:20px;bottom:36px;justify-content:space-between}
+  .hero-btns .btn{flex:1}
+  .feat-grid{grid-template-columns:1fr}
+  .feat,.feat:nth-child(2){border:0;margin:0;padding:0}
+  .banner-body{padding:32px 24px}
+  .news li a{gap:16px;flex-direction:column;align-items:flex-start}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px}
+  .tab{flex:none}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -530,7 +444,7 @@ section:not(.features){
     <a class="l" href="#news">公告</a>
 
    <div class="auth">
-  <a class="btn" href="https://go.246.com.tw/register?promo=car1go">登入</a>
+  <a class="btn" href="https://go.246.com.tw/register?promo=car1">登入</a>
       <a class="btn primary" href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a>
 </div>
   </div>
@@ -544,8 +458,8 @@ section:not(.features){
       <h1>榮耀 Online<br>踏入全新的遊戲世界</h1>
       <p>探索角色、世界與精彩冒險。</p>
       <div class="hero-btns">
-        <a class="btn primary" href="https://go.246.com.tw/register?promo=car1go">開始遊戲</a>
-        <a class="btn" href="https://lin.ee/5fEfP6L">查看遊戲</a>
+        <a class="btn primary" href="#games">開始遊戲</a>
+        <a class="btn" href="#hot">查看遊戲</a>
       </div>
     </div>
     <div class="hero-ctrl">
@@ -647,7 +561,7 @@ section:not(.features){
   <section id="events" aria-label="最新活動">
     <div class="wrap">
       <div class="banner rv">
-        <div class="ph" aria-hidden="true"><img data-img="banner" alt="" width="1600" height="600" loading="lazy" decoding="async"></div>
+        <div class="ph" aria-hidden="true"><img data-img="banner" alt="最新活動 Banner" width="1280" height="714" loading="lazy" decoding="async"></div>
         <div class="banner-body">
           <h2>最新活動</h2>
           <p>探索最新遊戲內容與限定活動</p>
