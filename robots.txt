@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flysohigh002-cpu.github.io/game-site/sitemap.xml
