@@ -248,24 +248,48 @@ main,footer{position:relative;z-index:2}
   html{scroll-behavior:auto}
   .rv{opacity:1;transform:none}
 }
-</style>
-</head>
-<body>
-<div class="bg" aria-hidden="true"><div class="bg-media" id="bgMedia"></div><div class="bg-glow"></div></div>
-<canvas id="fx" aria-hidden="true"></canvas>
-
 <header id="hd">
   <div class="wrap nav">
-    <a href="#top" class="logo"><img class="logo-img" alt="榮耀 Online" width="69" height="46" hidden><span class="logo-txt">榮耀 Online</span></a>
+
+    <a href="#top" class="logo">
+      <img class="logo-img" alt="榮耀 Online" width="69" height="46" hidden>
+      <span class="logo-txt">榮耀 Online</span>
+    </a>
+
     <nav class="menu" aria-label="主選單">
-      <a href="#top">首頁</a><a href="#games">遊戲</a><a href="#hot">熱門遊戲</a><a href="#events">活動</a><a href="#news">公告</a>
+      <a href="#top">首頁</a>
+      <a href="#games">遊戲</a>
+      <a href="#hot">熱門遊戲</a>
+      <a href="#events">活動</a>
+      <a href="#news">公告</a>
     </nav>
-    <div class="auth"><a class="btn" href="https://go.246.com.tw/register?promo=car1">登入</a><a href="https://lin.ee/5fEfP6L">客服</a>
-    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false"><i></i><i></i><i></i></button>
+
+    <!-- 電腦版按鈕 -->
+    <div class="auth">
+      <a class="btn" href="https://go.246.com.tw/register?promo=car1">登入</a>
+      <a class="btn primary" href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">
+      <i></i>
+      <i></i>
+      <i></i>
+    </button>
+
   </div>
+
+  <!-- 手機版選單 -->
   <div class="drawer" id="drawer">
-    <a class="l" href="#top">首頁</a><a class="l" href="#games">遊戲</a><a class="l" href="#hot">熱門遊戲</a><a class="l" href="#events">活動</a><a class="l" href="#news">公告</a>
-    <div class="auth"><a class="btn" href="https://go.246.com.tw/register?promo=car1">登入</a><a href="https://lin.ee/5fEfP6L">客服</a></div>
+    <a class="l" href="#top">首頁</a>
+    <a class="l" href="#games">遊戲</a>
+    <a class="l" href="#hot">熱門遊戲</a>
+    <a class="l" href="#events">活動</a>
+    <a class="l" href="#news">公告</a>
+
+    <div class="auth">
+      <a class="btn" href="https://go.246.com.tw/register?promo=car1">登入</a>
+      <a class="btn primary" href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a>
+    </div>
   </div>
 </header>
 
