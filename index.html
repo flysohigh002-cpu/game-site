@@ -378,18 +378,108 @@ section:not(.features){
   .drawer .auth .btn{flex:1;min-height:48px}
 }
 @media (max-width:768px){
-  section{padding:64px 0}
-  .grid{grid-template-columns:1fr}
-  .hero{align-items:flex-end;padding-bottom:110px}
-  .hero::after{background:linear-gradient(0deg,rgba(20,12,7,.95) 20%,rgba(20,12,7,.4) 70%,rgba(20,12,7,.25))}
-  .hero-ctrl{left:20px;right:20px;bottom:36px;justify-content:space-between}
-  .hero-btns .btn{flex:1}
-  .feat-grid{grid-template-columns:1fr}
-  .feat,.feat:nth-child(2){border:0;margin:0;padding:0}
-  .banner-body{padding:32px 24px}
-  .news li a{gap:16px;flex-direction:column;align-items:flex-start}
-  .tabs{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px}
-  .tab{flex:none}
+
+  section{
+    padding:64px 0;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  /* 手機 Hero 縮短，不再吃滿整個螢幕 */
+  .hero{
+    min-height:620px;
+    height:620px;
+    align-items:flex-end;
+    padding-bottom:105px;
+  }
+
+  .hero::after{
+    background:
+      linear-gradient(
+        0deg,
+        rgba(20,12,7,.98) 10%,
+        rgba(20,12,7,.78) 38%,
+        rgba(20,12,7,.35) 72%,
+        rgba(20,12,7,.2) 100%
+      );
+  }
+
+  /* 讓文字區再往上一點 */
+  .hero-body{
+    padding-top:0;
+    padding-bottom:10px;
+  }
+
+  .hero-game{
+    margin-bottom:12px;
+  }
+
+  .hero h1{
+    font-size:clamp(38px,10vw,54px);
+    line-height:1.08;
+    max-width:100%;
+  }
+
+  .hero p{
+    margin:16px 0 24px;
+    font-size:15px;
+  }
+
+  .hero-btns{
+    gap:10px;
+  }
+
+  .hero-btns .btn{
+    flex:1;
+    min-height:48px;
+    padding:0 16px;
+  }
+
+  .hero-ctrl{
+    left:20px;
+    right:20px;
+    bottom:28px;
+    justify-content:space-between;
+  }
+
+  .arrow{
+    width:48px;
+    height:48px;
+  }
+
+  .feat-grid{
+    grid-template-columns:1fr;
+  }
+
+  .feat,
+  .feat:nth-child(2){
+    border:0;
+    margin:0;
+    padding:0;
+  }
+
+  .banner-body{
+    padding:32px 24px;
+  }
+
+  .news li a{
+    gap:16px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .tabs{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    width:100%;
+    padding-bottom:4px;
+  }
+
+  .tab{
+    flex:none;
+  }
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
