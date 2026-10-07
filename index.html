@@ -188,6 +188,41 @@ header.solid{background:rgba(20,12,7,.92)}
 .news time{color:var(--accent);font-variant-numeric:tabular-nums;min-width:110px}
 .news span{font-size:18px}
 
+
+
+/* 常見問題 FAQ */
+.faq-list{display:grid;gap:12px;max-width:980px;margin:0 auto}
+.faq-item{border:1px solid var(--line);background:rgba(30,19,12,.68);overflow:hidden}
+.faq-item summary{position:relative;display:flex;align-items:center;justify-content:space-between;gap:22px;cursor:pointer;padding:22px 24px;color:var(--text);font:700 18px var(--serif);list-style:none}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"＋";flex:none;color:var(--accent);font:400 24px/1 var(--sans);transition:transform .25s}
+.faq-item[open] summary::after{content:"−"}
+.faq-item summary:hover{background:rgba(255,255,255,.03)}
+.faq-answer{padding:0 24px 24px;color:var(--mute);font-size:15px;line-height:1.9}
+.faq-answer p + p{margin-top:10px}
+.faq-answer a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.faq-answer ul{list-style:disc;padding-left:22px;margin-top:10px}
+.faq-answer li + li{margin-top:8px}
+.responsible{background:rgba(26,16,10,.74);border-block:1px solid rgba(230,192,113,.2)}
+.responsible-box{max-width:980px;margin:28px auto 0}
+.responsible-box p{color:var(--mute);font-size:16px;line-height:1.9}
+.responsible-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.responsible-list li{padding:18px 20px;border:1px solid var(--line);background:rgba(30,19,12,.58);color:var(--mute);line-height:1.8}
+.responsible-list strong{display:block;color:var(--text);font-family:var(--serif);font-size:18px;margin-bottom:4px}
+.conclusion{padding-top:70px;padding-bottom:82px}
+.conclusion .lead2{max-width:980px;margin:18px auto 0;color:var(--mute);font-size:17px;line-height:1.95}
+@media (max-width:768px){
+  .faq-list{gap:10px}
+  .faq-item summary{padding:18px 17px;font-size:16px;line-height:1.5}
+  .faq-answer{padding:0 17px 18px;font-size:14px;line-height:1.85}
+  .responsible-box{margin-top:20px}
+  .responsible-list{grid-template-columns:1fr;gap:10px;margin-top:18px}
+  .responsible-list li{padding:15px 16px;font-size:14px}
+  .responsible-list strong{font-size:17px}
+  .conclusion{padding-top:30px;padding-bottom:42px}
+  .conclusion .lead2{font-size:15px;line-height:1.85}
+}
+
 /* Footer */
 footer{background:rgba(16,10,6,.92);border-top:1px solid var(--line);padding:64px 0 32px}
 .foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
@@ -618,6 +653,7 @@ section:not(.features){
       <a href="#hot">熱門遊戲</a>
       <a href="#events">活動</a>
       <a href="#news">公告</a>
+      <a href="#faq">FAQ</a>
     </nav>
 
     <div class="auth">
@@ -640,6 +676,7 @@ section:not(.features){
     <a class="l" href="#hot">熱門遊戲</a>
     <a class="l" href="#events">活動</a>
     <a class="l" href="#news">公告</a>
+    <a class="l" href="#faq">常見問題 FAQ</a>
 
    <div class="auth">
   <a class="btn" href="https://go.246.com.tw/register?promo=car1">登入</a>
@@ -767,7 +804,7 @@ section:not(.features){
         <div class="ph" aria-hidden="true"><img data-img="banner" alt="最新活動 Banner" width="1280" height="714" loading="lazy" decoding="async"></div>
         <div class="banner-body">
           <h2>最新活動</h2>
-          <p></p>
+          <p>探索最新遊戲內容與限定活動</p>
           <a class="btn primary" href="#">查看活動</a>
         </div>
       </div>
@@ -785,7 +822,20 @@ section:not(.features){
     </div>
   </section>
 
-   <section id="faq" aria-labelledby="faq-title">
+  <section id="news" style="padding-top:0" aria-labelledby="news-title">
+    <div class="wrap">
+      <div class="sec-head rv"><h2 id="news-title">最新公告</h2></div>
+      <ul class="news rv" id="newsList">
+        <li><a href="#"><time datetime="2026-10-06">2026.10.06</time><span>平台更新公告</span></a></li>
+        <li><a href="#"><time datetime="2026-10-01">2026.10.01</time><span>新遊戲上線</span></a></li>
+        <li><a href="#"><time datetime="2026-09-28">2026.09.28</time><span>活動公告</span></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+
+  <section id="faq" aria-labelledby="faq-title">
     <div class="wrap">
       <div class="sec-head rv">
         <h2 id="faq-title">常見問題 FAQ</h2>
@@ -855,7 +905,7 @@ section:not(.features){
         <details class="faq-item rv">
           <summary>Q9：哪個平台最適合追求 VIP 質感的玩家？</summary>
           <div class="faq-answer">
-            <p>推薦 3 家具備 VIP 尊榮感的深色精品系平台：<a href="https://icasino.tw/reviews/fcc99/">金爸爸娛樂城</a>、<a href="https://icasino.tw/reviews/aos888/">黑桃A Online</a>、<a href="https://icasino.tw/reviews/rdplays/">紅鑽娛樂城</a>。其中財哥娛樂城與黑桃A Online 皆為 5 星評分，紅鑽娛樂城則為 4 星。</p>
+            <p>推薦 3 家具備 VIP 尊榮感的深色精品系平台：<a href="https://icasino.tw/reviews/fcc99/">財哥娛樂城</a>、<a href="https://icasino.tw/reviews/aos888/">黑桃A Online</a>、<a href="https://icasino.tw/reviews/rdplays/">紅鑽娛樂城</a>。其中財哥娛樂城與黑桃A Online 皆為 5 星評分，紅鑽娛樂城則為 4 星。</p>
           </div>
         </details>
 
@@ -903,18 +953,6 @@ section:not(.features){
       <p class="lead2 rv" style="margin-top:14px"><strong>需要再次強調的是，LINE娛樂城 在台灣屬於合法的線上互動娛樂服務，但純屬娛樂性質，平台點數無法直接兌換為現金。</strong> 建議玩家以「娛樂消費」的心態進行遊玩。</p>
     </div>
   </section>
-  
-  <section id="news" style="padding-top:0" aria-labelledby="news-title">
-    <div class="wrap">
-      <div class="sec-head rv"><h2 id="news-title">最新公告</h2></div>
-      <ul class="news rv" id="newsList">
-        <li><a href="#"><time datetime="2026-10-06">2026.10.06</time><span>平台更新公告</span></a></li>
-        <li><a href="#"><time datetime="2026-10-01">2026.10.01</time><span>新遊戲上線</span></a></li>
-        <li><a href="#"><time datetime="2026-09-28">2026.09.28</time><span>活動公告</span></a></li>
-      </ul>
-    </div>
-  </section>
-</main>
 
 <footer>
   <div class="wrap">
@@ -929,7 +967,7 @@ section:not(.features){
         </div>
       </div>
       <nav class="foot-links" aria-label="頁尾連結">
-        <a href="#">關於平台</a><a href="#games">遊戲</a><a href="#events">活動</a><a href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a><a href="#">使用條款</a><a href="#">隱私政策</a>
+        <a href="#">關於平台</a><a href="#games">遊戲</a><a href="#events">活動</a><a href="#faq">FAQ</a><a href="#responsible-title">責任娛樂</a><a href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a><a href="#">使用條款</a><a href="#">隱私政策</a>
       </nav>
     </div>
     <div class="copy">© 2026 榮耀 Online</div>
