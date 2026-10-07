@@ -3,477 +3,3563 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>榮耀 Online｜線上遊戲平台，熱門線上遊戲與角色扮演冒險</title>
-<meta name="description" content="榮耀 Online 線上遊戲平台，提供 MMORPG、動作 RPG、冒險與策略等熱門線上遊戲，一個帳號即可進入，並持續更新最新遊戲與活動。">
+
+<title>榮耀 Online｜線上遊戲平台</title>
+
+<meta name="description"
+content="榮耀 Online 線上遊戲平台，探索 MMORPG、RPG、Action、Adventure 與 Strategy 等遊戲內容。">
+
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#140d08">
-<link rel="canonical" href="https://flysohigh002-cpu.github.io/game-site/">
+
+<link rel="canonical"
+href="https://flysohigh002-cpu.github.io/game-site/">
+
 <link rel="icon" href="logo.png" type="image/png">
+
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="榮耀 Online">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:url" content="https://flysohigh002-cpu.github.io/game-site/">
+<meta property="og:url"
+content="https://flysohigh002-cpu.github.io/game-site/">
 <meta property="og:title" content="榮耀 Online｜線上遊戲平台">
-<meta property="og:description" content="探索線上遊戲、角色扮演、冒險與更多精彩遊戲內容。">
-<meta property="og:image" content="https://flysohigh002-cpu.github.io/game-site/logo.png">
+<meta property="og:description"
+content="探索線上遊戲、角色扮演、冒險與更多精彩遊戲內容。">
+<meta property="og:image"
+content="https://flysohigh002-cpu.github.io/game-site/logo.png">
+
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    { "@type": "WebSite", "name": "榮耀 Online", "url": "https://flysohigh002-cpu.github.io/game-site/", "inLanguage": "zh-Hant" },
-    { "@type": "Organization", "name": "榮耀 Online", "url": "https://flysohigh002-cpu.github.io/game-site/", "logo": "https://flysohigh002-cpu.github.io/game-site/logo.png" }
-  ]
-}
-</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+
+
+<!-- =====================================================
+     圖片設定區
+     所有圖片放在 index.html 同一個資料夾
+     ===================================================== -->
+
 <script>
+
 const SITE_IMAGES = {
-  logo: "logo.png",
-  background: "background.png",
-  hero1: "hero1.jpg",
-  hero2: "hero2.jpg",
-  hero3: "hero3.jpg",
-  game1: "game1.jpg",
-  game2: "game2.jpg",
-  game3: "game3.jpg",
-  game4: "game4.jpg",
-  game5: "game5.jpg",
-  game6: "game6.jpg",
-  banner: "banner.jpg"
+
+    logo: "logo.png",
+
+    background: "background.png",
+
+    hero1: "hero1.jpg",
+    hero2: "hero2.jpg",
+    hero3: "hero3.jpg",
+
+    explore: "explore.jpg",
+
+    game1: "game1.jpg",
+    game2: "game2.jpg",
+    game3: "game3.jpg",
+    game4: "game4.jpg",
+    game5: "game5.jpg",
+    game6: "game6.jpg",
+
+    banner: "banner.jpg"
+
 };
+
+
+/*
+    如果之後有 .mp4 背景影片，
+    可以填：
+
+    const BG_VIDEO = "background.mp4";
+
+    現在沒有就保持空白。
+*/
+
 const BG_VIDEO = "";
+
+
+/*
+    Hero 三張圖片
+*/
+
 const HERO_SLIDES = [
-  { img: SITE_IMAGES.hero1, name: "GAME 01" },
-  { img: SITE_IMAGES.hero2, name: "GAME 02" },
-  { img: SITE_IMAGES.hero3, name: "GAME 03" }
+
+    {
+        img: SITE_IMAGES.hero1,
+        name: "GAME 01"
+    },
+
+    {
+        img: SITE_IMAGES.hero2,
+        name: "GAME 02"
+    },
+
+    {
+        img: SITE_IMAGES.hero3,
+        name: "GAME 03"
+    }
+
 ];
+
 </script>
+
+
 <style>
+
+/* =====================================================
+   基本
+   ===================================================== */
+
 :root{
-  --bg:#140d08;--bg2:#1d130c;--bg3:#271a10;--line:rgba(230,192,113,.16);
-  --text:#f5eee1;--mute:#b3a692;--accent:#e6c071;--accent2:#c99a3c;--cold:#5b6bff;
-  --serif:"Noto Serif TC","Songti TC",serif;--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
-  --card-gap:10px;
+
+    --bg:#0b0704;
+    --bg2:#140d08;
+    --bg3:#26180e;
+
+    --line:rgba(230,192,113,.16);
+
+    --text:#f5eee1;
+    --mute:#b3a692;
+
+    --accent:#e6c071;
+    --accent2:#c99a3c;
+
+    --serif:
+    "Noto Serif TC",
+    "Songti TC",
+    serif;
+
+    --sans:
+    "Noto Sans TC",
+    "PingFang TC",
+    "Microsoft JhengHei",
+    sans-serif;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{background:#0b0704;color:var(--text);font-family:var(--sans);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-a{color:inherit;text-decoration:none}
-ul{list-style:none}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{width:min(1240px,100% - 40px);margin:0 auto}
-section{padding:80px 0}
-h2{font-family:var(--serif);font-weight:900;font-size:clamp(26px,4vw,42px);line-height:1.25;letter-spacing:.02em}
-.sec-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
 
-.ph{position:relative;background:radial-gradient(ellipse at 72% 38%,rgba(230,192,113,.2),transparent 55%),linear-gradient(135deg,#2c1e12,#120b06 60%,#241608);overflow:hidden}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
-/* Header */
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(20,12,7,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);transition:background .3s}
-header.solid{background:rgba(20,12,7,.92)}
-.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:900;font-size:20px;letter-spacing:.06em}
-.logo img{height:46px;width:auto}
-.menu{display:flex;gap:34px;font-size:15px}
-.menu a{color:var(--mute);transition:color .25s}
-.menu a:hover{color:var(--text)}
-.auth{display:flex;gap:10px}
-.auth .btn{min-height:40px;padding:0 20px;font-size:14px}
-.burger{display:none;width:44px;height:44px;background:none;border:0;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px}
-.burger i{display:block;width:22px;height:2px;background:var(--text);transition:transform .3s,opacity .3s}
-.burger.open i:nth-child(1){transform:translateY(8px) rotate(45deg)}
-.burger.open i:nth-child(2){opacity:0}
-.burger.open i:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-.drawer{display:none}
+*{
 
-/* Hero */
-.hero{position:relative;min-height:100vh;min-height:100svh;padding:0;display:flex;align-items:center;overflow:hidden;isolation:isolate;background:linear-gradient(180deg,rgba(8,4,2,.04),rgba(8,4,2,.18))}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
-.slide.on{opacity:1}
-.slide .ph{position:absolute;inset:0}
-.slide.on .ph img{animation:drift 9s ease-out forwards}
-@keyframes drift{from{transform:scale(1.08)}to{transform:scale(1)}}
-.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(20,12,7,.88) 0%,rgba(20,12,7,.48) 48%,rgba(20,12,7,.16) 100%),linear-gradient(0deg,rgba(20,12,7,.96) 0%,transparent 33%,rgba(20,12,7,.12) 100%)}
-.hero::before{content:"";position:absolute;inset:-20% 0 0;z-index:1;pointer-events:none;mix-blend-mode:screen;background:conic-gradient(from 200deg at 75% -10%,transparent 0deg,rgba(230,192,113,.15) 8deg,transparent 18deg,rgba(230,192,113,.09) 28deg,transparent 40deg);animation:sway 14s ease-in-out infinite alternate}
-@keyframes sway{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
-#fx{position:fixed;inset:0;z-index:3;width:100%;height:100%;pointer-events:none}
-.hero-body{position:relative;z-index:3;padding-top:68px}
-.hero-game{color:var(--accent);font-size:14px;letter-spacing:.2em;margin-bottom:18px}
-.hero h1{background:linear-gradient(180deg,#fff 15%,#f3d589 58%,#c99a3c);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 24px rgba(0,0,0,.6));font-family:var(--serif);font-weight:900;font-size:clamp(40px,7vw,88px);line-height:1.12;letter-spacing:.03em;max-width:9em}
-.hero p{margin:22px 0 36px;font-size:clamp(16px,1.6vw,20px);color:#c9ccd3}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.hero-ctrl{position:absolute;z-index:4;right:max(20px,calc((100% - 1240px)/2));bottom:40px;display:flex;align-items:center;gap:12px}
-.arrow{width:48px;height:48px;border:1px solid var(--line);background:rgba(20,12,7,.5);color:var(--text);cursor:pointer;font-size:18px;transition:border-color .3s,background .3s}
-.arrow:hover{border-color:var(--accent);background:rgba(230,192,113,.2)}
-.dots{display:flex;gap:8px;margin-right:8px}
-.dots button{width:28px;height:3px;border:0;background:rgba(255,255,255,.3);cursor:pointer;padding:0}
-.dots button.on{background:var(--accent)}
+    box-sizing:border-box;
 
-/* 按鈕 */
-.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 32px;font:700 15px var(--serif);letter-spacing:.14em;color:#f1dfb4;cursor:pointer;background:linear-gradient(180deg,rgba(66,44,24,.9),rgba(30,19,10,.92));border:1px solid #8a6a2c;box-shadow:inset 0 0 0 3px rgba(20,12,7,.92),inset 0 0 0 4px rgba(230,192,113,.35),0 6px 18px rgba(0,0,0,.45);transition:transform .3s,border-color .3s,box-shadow .3s,color .3s}
-.btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;z-index:-1;background:linear-gradient(100deg,transparent,rgba(255,236,170,.4),transparent);transform:skewX(-20deg);transition:left .7s ease}
-.btn:hover{transform:translateY(-2px);color:#fff;border-color:#e6c071;box-shadow:inset 0 0 0 3px rgba(20,12,7,.92),inset 0 0 0 4px rgba(230,192,113,.7),0 10px 26px rgba(0,0,0,.55),0 0 22px rgba(230,192,113,.22)}
-.btn:hover::after{left:130%}
-.btn:active{transform:translateY(0) scale(.98)}
-.btn.primary{color:#2a1a05;text-shadow:0 1px 0 rgba(255,238,190,.6);background:linear-gradient(180deg,#f9e09b 0%,#e2b556 47%,#b98528 53%,#dcaa44 100%);border-color:#6b4a14;box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 0 0 3px rgba(255,240,190,.28),inset 0 -3px 6px rgba(120,76,10,.45),0 0 0 1px rgba(230,192,113,.4),0 8px 22px rgba(0,0,0,.55)}
-.btn.primary:hover{color:#1a1004;border-color:#e6c071;box-shadow:inset 0 1px 0 rgba(255,255,255,.8),inset 0 0 0 3px rgba(255,240,190,.4),inset 0 -3px 6px rgba(120,76,10,.4),0 0 0 1px rgba(255,220,140,.7),0 10px 28px rgba(0,0,0,.55),0 0 30px rgba(230,192,113,.45)}
+    margin:0;
 
-/* 分類 */
-.tabs{display:flex;gap:8px;flex-wrap:wrap}
-.tab{min-height:40px;padding:0 18px;background:transparent;border:1px solid var(--line);color:var(--mute);font:500 13px var(--sans);cursor:pointer;transition:all .25s}
-.tab:hover{color:var(--text);border-color:rgba(255,255,255,.3)}
-.tab.on{color:#2a1a05;font-weight:700;background:linear-gradient(180deg,#f9e09b,#dcaa44);border-color:#e6c071}
+    padding:0;
 
-/* ===== 遊戲卡片（緊密版） ===== */
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+    scroll-padding-top:72px;
+
+}
+
+
+body{
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:var(--sans);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+
+button{
+
+    font:inherit;
+
+}
+
+
+ul{
+
+    list-style:none;
+
+}
+
+
+:focus-visible{
+
+    outline:2px solid var(--accent);
+
+    outline-offset:3px;
+
+}
+
+
+.wrap{
+
+    width:min(1240px,calc(100% - 40px));
+
+    margin:auto;
+
+}
+
+
+section{
+
+    padding:56px 0;
+
+}
+
+
+h2{
+
+    font-family:var(--serif);
+
+    font-weight:900;
+
+    font-size:clamp(28px,4vw,44px);
+
+    line-height:1.25;
+
+}
+
+
+.sec-head{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:36px;
+
+}
+
+
+/* =====================================================
+   全站背景
+   ===================================================== */
+
+.bg{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    background:
+
+    radial-gradient(
+        75% 48% at 72% 10%,
+        rgba(230,192,113,.12),
+        transparent 68%
+    ),
+
+    radial-gradient(
+        60% 55% at 10% 48%,
+        rgba(83,104,155,.10),
+        transparent 72%
+    ),
+
+    linear-gradient(
+        180deg,
+        #160e09,
+        #0c0704 46%,
+        #070403
+    );
+
+}
+
+
+.bg-media{
+
+    position:absolute;
+
+    inset:-2%;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    opacity:.58;
+
+    filter:
+        saturate(.88)
+        contrast(1.08)
+        brightness(.62);
+
+    transform:scale(1.035);
+
+    animation:bgBreath 18s ease-in-out infinite alternate;
+
+}
+
+
+.bg-media::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(8,4,2,.72),
+        rgba(8,4,2,.30) 34%,
+        rgba(8,4,2,.10) 62%,
+        rgba(8,4,2,.44)
+    ),
+
+    linear-gradient(
+        180deg,
+        rgba(8,4,2,.12),
+        transparent 34%,
+        rgba(8,4,2,.38)
+    );
+
+}
+
+
+.bg-media::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        42% 30% at 74% 18%,
+        rgba(242,210,142,.16),
+        transparent 72%
+    ),
+
+    radial-gradient(
+        30% 26% at 18% 62%,
+        rgba(87,105,170,.10),
+        transparent 70%
+    );
+
+    mix-blend-mode:screen;
+
+}
+
+
+.bg-media video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.bg-glow{
+
+    position:absolute;
+
+    inset:-12% -4%;
+
+    background:
+
+    radial-gradient(
+        28% 18% at 76% 12%,
+        rgba(255,232,172,.12),
+        transparent 76%
+    ),
+
+    radial-gradient(
+        34% 22% at 54% 92%,
+        rgba(230,192,113,.08),
+        transparent 78%
+    );
+
+}
+
+
+.bg::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    background:
+
+    radial-gradient(
+        ellipse at center,
+        transparent 28%,
+        rgba(7,4,2,.24) 60%,
+        rgba(5,3,2,.84)
+    );
+
+}
+
+
+.bg::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:3;
+
+    opacity:.04;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.035) 1px,
+        transparent 1px
+    ),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.035) 1px,
+        transparent 1px
+    );
+
+    background-size:88px 88px;
+
+}
+
+
+/* =====================================================
+   Header
+   ===================================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    right:0;
+
+    z-index:50;
+
+    background:rgba(20,12,7,.45);
+
+    backdrop-filter:blur(14px);
+
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--line);
+
+    transition:.3s;
+
+}
+
+
+header.solid{
+
+    background:rgba(20,12,7,.92);
+
+}
+
+
+.nav{
+
+    height:68px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+}
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-family:var(--serif);
+
+    font-weight:900;
+
+    font-size:20px;
+
+    letter-spacing:.06em;
+
+}
+
+
+.logo img{
+
+    height:46px;
+
+    width:auto;
+
+    max-width:180px;
+
+    object-fit:contain;
+
+}
+
+
+.logo-txt{
+
+    white-space:nowrap;
+
+}
+
+
+.menu{
+
+    display:flex;
+
+    gap:34px;
+
+    font-size:15px;
+
+}
+
+
+.menu a{
+
+    color:var(--mute);
+
+    transition:.25s;
+
+}
+
+
+.menu a:hover{
+
+    color:var(--text);
+
+}
+
+
+.auth{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+.burger{
+
+    display:none;
+
+    width:44px;
+
+    height:44px;
+
+    background:none;
+
+    border:0;
+
+    cursor:pointer;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+
+.burger i{
+
+    width:22px;
+
+    height:2px;
+
+    background:var(--text);
+
+    transition:.3s;
+
+}
+
+
+.burger.open i:nth-child(1){
+
+    transform:translateY(8px) rotate(45deg);
+
+}
+
+
+.burger.open i:nth-child(2){
+
+    opacity:0;
+
+}
+
+
+.burger.open i:nth-child(3){
+
+    transform:translateY(-8px) rotate(-45deg);
+
+}
+
+
+.drawer{
+
+    display:none;
+
+}
+
+
+/* =====================================================
+   按鈕
+   ===================================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:48px;
+
+    padding:0 32px;
+
+    font:700 15px var(--serif);
+
+    letter-spacing:.14em;
+
+    color:#f1dfb4;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(66,44,24,.9),
+            rgba(30,19,10,.92)
+        );
+
+    border:1px solid #8a6a2c;
+
+    box-shadow:
+
+        inset 0 0 0 3px rgba(20,12,7,.92),
+
+        inset 0 0 0 4px rgba(230,192,113,.35),
+
+        0 6px 18px rgba(0,0,0,.45);
+
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    color:#fff;
+
+    border-color:var(--accent);
+
+}
+
+
+.btn.primary{
+
+    color:#2a1a05;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f9e09b,
+            #e2b556 47%,
+            #b98528 53%,
+            #dcaa44
+        );
+
+}
+
+
+/* =====================================================
+   Hero
+   ===================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    min-height:100svh;
+
+    padding:0;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+}
+
+
+.slides{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+}
+
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:0;
+
+    transition:opacity 1.2s ease;
+
+}
+
+
+.slide.on{
+
+    opacity:1;
+
+}
+
+
+.slide .ph{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+
+.slide .ph img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.slide.on .ph img{
+
+    animation:drift 9s ease-out forwards;
+
+}
+
+
+@keyframes drift{
+
+    from{
+        transform:scale(1.08);
+    }
+
+    to{
+        transform:scale(1);
+    }
+
+}
+
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(20,12,7,.88),
+        rgba(20,12,7,.48) 48%,
+        rgba(20,12,7,.16)
+    ),
+
+    linear-gradient(
+        0deg,
+        rgba(20,12,7,.96),
+        transparent 33%
+    );
+
+}
+
+
+.hero-body{
+
+    position:relative;
+
+    z-index:4;
+
+    padding-top:68px;
+
+}
+
+
+.hero-game{
+
+    color:var(--accent);
+
+    font-size:14px;
+
+    letter-spacing:.2em;
+
+    margin-bottom:18px;
+
+}
+
+
+.hero h1{
+
+    font-family:var(--serif);
+
+    font-weight:900;
+
+    font-size:clamp(40px,7vw,88px);
+
+    line-height:1.12;
+
+    max-width:9em;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff 15%,
+            #f3d589 58%,
+            #c99a3c
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+    filter:drop-shadow(
+        0 4px 24px rgba(0,0,0,.6)
+    );
+
+}
+
+
+.hero p{
+
+    margin:22px 0 36px;
+
+    font-size:clamp(16px,1.6vw,20px);
+
+    color:#c9ccd3;
+
+}
+
+
+.hero-btns{
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.hero-ctrl{
+
+    position:absolute;
+
+    z-index:5;
+
+    right:max(
+        20px,
+        calc((100% - 1240px)/2)
+    );
+
+    bottom:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.arrow{
+
+    width:48px;
+
+    height:48px;
+
+    border:1px solid var(--line);
+
+    background:rgba(20,12,7,.5);
+
+    color:var(--text);
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+
+.dots{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+
+.dots button{
+
+    width:28px;
+
+    height:3px;
+
+    border:0;
+
+    background:rgba(255,255,255,.3);
+
+    cursor:pointer;
+
+}
+
+
+.dots button.on{
+
+    background:var(--accent);
+
+}
+
+
+/* =====================================================
+   遊戲
+   ===================================================== */
+
+.tabs{
+
+    display:flex;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.tab{
+
+    min-height:44px;
+
+    padding:0 20px;
+
+    background:transparent;
+
+    border:1px solid var(--line);
+
+    color:var(--mute);
+
+    cursor:pointer;
+
+}
+
+
+.tab.on{
+
+    color:#2a1a05;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f9e09b,
+            #dcaa44
+        );
+
+    border-color:var(--accent);
+
+}
+
+
 .grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:var(--card-gap);        /* 統一間距 10px */
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:18px;
+
 }
+
+
 .card{
-  position:relative;display:block;
-  background:rgba(30,19,12,.86);
-  border:1px solid var(--line);
-  overflow:hidden;
-  transition:transform .35s,box-shadow .35s,border-color .35s;
-  border-radius:4px;          /* 輕微圓角，更精緻 */
+
+    position:relative;
+
+    display:block;
+
+    background:
+        rgba(30,19,12,.86);
+
+    border:1px solid var(--line);
+
+    overflow:hidden;
+
+    transition:.45s;
+
 }
-.card .ph{aspect-ratio:16/9}
-.card .ph img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.card:hover{transform:translateY(-4px);border-color:rgba(230,192,113,.6);box-shadow:0 16px 40px rgba(0,0,0,.6),0 0 0 1px rgba(230,192,113,.28)}
-.card:hover .ph img{transform:scale(1.06)}
-.card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,12,7,.85),transparent 55%)}
-.card-info{padding:16px 18px 20px}   /* 收緊內邊距 */
-.card-type{display:block;color:var(--accent);font-size:12px;letter-spacing:.14em}
-.card-name{font-family:var(--serif);font-weight:900;font-size:20px;margin:2px 0 4px}
-.card-desc{color:var(--mute);font-size:14px;max-height:0;opacity:0;overflow:hidden;transition:max-height .4s,opacity .4s,margin .4s}
-.card:hover .card-desc{max-height:72px;opacity:1;margin-bottom:10px}
-.card-go{display:inline-flex;align-items:center;min-height:36px;color:var(--text);font-weight:500;font-size:14px;border-bottom:1px solid var(--accent)}
-.card.hide{display:none}
-@media (hover:none){.card-desc{max-height:none;opacity:1;margin-bottom:10px}}
 
-/* 平台特色 */
-.features{background:linear-gradient(180deg,rgba(14,8,5,.72),rgba(22,12,7,.62)),radial-gradient(50% 80% at 80% 0%,rgba(230,192,113,.06),transparent 72%);border-block:1px solid rgba(230,192,113,.2)}
-.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px}
-.feat{padding:8px 32px 8px 0;border-right:1px solid var(--line);margin-right:32px}
-.feat:last-child{border:0;margin:0}
-.feat svg{width:36px;height:36px;stroke:var(--accent);fill:none;stroke-width:1.5;margin-bottom:18px}
-.feat h3{font-family:var(--serif);font-size:20px;margin-bottom:8px}
-.feat p{color:var(--mute);font-size:15px}
 
-/* 活動 Banner */
-.banner{position:relative;width:100%;aspect-ratio:16/9;min-height:0;display:flex;align-items:center;border:1px solid var(--line);overflow:hidden;border-radius:4px}
-.banner .ph{position:absolute;inset:0}
-.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,12,7,.9),rgba(20,12,7,.2))}
-.banner-body{position:relative;z-index:2;padding:48px;max-width:560px}
-.banner-body p{margin:12px 0 28px;color:#c9ccd3}
+.card:hover{
 
-/* 遊戲介紹 */
-.explore{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:center}
-.explore .ph{aspect-ratio:16/10;border:1px solid var(--line);border-radius:4px}
-.explore p{margin:16px 0 30px;color:var(--mute);font-size:17px}
+    transform:translateY(-6px);
 
-/* 公告 */
-.news li a{display:flex;gap:32px;align-items:center;padding:24px 4px;border-top:1px solid var(--line);transition:padding .3s,background .3s}
-.news li:last-child a{border-bottom:1px solid var(--line)}
-.news li a:hover{padding-left:18px;background:rgba(255,255,255,.03)}
-.news time{color:var(--accent);font-variant-numeric:tabular-nums;min-width:110px}
-.news span{font-size:18px}
+    border-color:
+        rgba(230,192,113,.6);
 
-/* Footer */
-footer{background:rgba(16,10,6,.92);border-top:1px solid var(--line);padding:64px 0 32px}
-.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
-.foot-links{display:flex;gap:12px 32px;flex-wrap:wrap;color:var(--mute);font-size:15px;max-width:520px}
-.foot-links a:hover{color:var(--text)}
-.social{display:flex;gap:10px;margin-top:22px}
-.social a{width:44px;height:44px;border:1px solid var(--line);display:grid;place-items:center;transition:border-color .3s,background .3s}
-.social a:hover{border-color:var(--accent);background:rgba(230,192,113,.15)}
-.social svg{width:20px;height:20px;fill:var(--text)}
-.copy{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+    box-shadow:
+        0 24px 60px rgba(0,0,0,.6);
 
-/* 背景 */
-.bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(75% 48% at 72% 10%,rgba(230,192,113,.12),transparent 68%),radial-gradient(60% 55% at 10% 48%,rgba(83,104,155,.10),transparent 72%),linear-gradient(180deg,#160e09 0%,#0c0704 46%,#070403 100%)}
-.bg-media{position:absolute;inset:-2%;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:.58;filter:saturate(.88) contrast(1.08) brightness(.62);transform:scale(1.035);will-change:transform;animation:bgBreath 18s ease-in-out infinite alternate}
-.bg-media::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,4,2,.72) 0%,rgba(8,4,2,.30) 34%,rgba(8,4,2,.10) 62%,rgba(8,4,2,.44) 100%),linear-gradient(180deg,rgba(8,4,2,.12) 0%,transparent 34%,rgba(8,4,2,.38) 100%)}
-.bg-media::after{content:"";position:absolute;inset:0;background:radial-gradient(42% 30% at 74% 18%,rgba(242,210,142,.16),transparent 72%),radial-gradient(30% 26% at 18% 62%,rgba(87,105,170,.10),transparent 70%),linear-gradient(180deg,transparent 55%,rgba(8,4,2,.30) 100%);mix-blend-mode:screen}
-.bg-media video{width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(1.08) brightness(.62)}
-.bg-glow{position:absolute;inset:-12% -4%;transform:translate3d(0,calc(var(--sy,0) * -.035px),0);background:radial-gradient(28% 18% at 76% 12%,rgba(255,232,172,.12),transparent 76%),radial-gradient(34% 22% at 54% 92%,rgba(230,192,113,.08),transparent 78%),radial-gradient(30% 28% at 4% 48%,rgba(91,107,255,.06),transparent 76%);opacity:.95;will-change:transform}
-.bg::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 28%,rgba(7,4,2,.24) 60%,rgba(5,3,2,.84) 100%),linear-gradient(180deg,rgba(5,3,2,.18) 0%,transparent 18%,transparent 74%,rgba(5,3,2,.55) 100%);z-index:2}
-.bg::after{content:"";position:absolute;inset:0;opacity:.055;mix-blend-mode:overlay;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:88px 88px;mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 84%,transparent 100%);z-index:3}
-main,footer{position:relative;z-index:2}
-section:not(.hero){position:relative}
-section:not(.features){background:linear-gradient(180deg,rgba(12,7,4,.03),rgba(12,7,4,.11))}
-@keyframes bgBreath{from{transform:scale(1.035) translate3d(0,0,0)}to{transform:scale(1.065) translate3d(-.5%,-.35%,0)}}
+}
 
-.card-type{display:block}
-.lead{max-width:640px;margin-top:14px;color:var(--mute)}
-.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
-.rv.in{opacity:1;transform:none}
 
-/* Responsive */
+.card .ph{
+
+    aspect-ratio:16/9;
+
+}
+
+
+.ph{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        ellipse at 72% 38%,
+        rgba(230,192,113,.2),
+        transparent 55%
+    ),
+
+    linear-gradient(
+        135deg,
+        #2c1e12,
+        #120b06 60%,
+        #241608
+    );
+
+}
+
+
+.ph img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.card .ph::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(20,12,7,.85),
+            transparent 55%
+        );
+
+}
+
+
+.card-info{
+
+    padding:22px 24px 26px;
+
+}
+
+
+.card-type{
+
+    color:var(--accent);
+
+    font-size:13px;
+
+    letter-spacing:.14em;
+
+}
+
+
+.card-name{
+
+    font-family:var(--serif);
+
+    font-weight:900;
+
+    font-size:24px;
+
+    margin:2px 0 6px;
+
+}
+
+
+.card-desc{
+
+    color:var(--mute);
+
+    font-size:15px;
+
+    margin-bottom:14px;
+
+}
+
+
+.card-go{
+
+    display:inline-flex;
+
+    min-height:44px;
+
+    align-items:center;
+
+    border-bottom:
+        1px solid var(--accent);
+
+}
+
+
+.card.hide{
+
+    display:none;
+
+}
+
+
+/* =====================================================
+   Features
+   ===================================================== */
+
+.features{
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(14,8,5,.72),
+            rgba(22,12,7,.62)
+        );
+
+    border-block:
+        1px solid rgba(230,192,113,.2);
+
+}
+
+
+.feat-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    margin-top:28px;
+
+}
+
+
+.feat{
+
+    padding:8px 32px 8px 0;
+
+    border-right:
+        1px solid var(--line);
+
+    margin-right:32px;
+
+}
+
+
+.feat:last-child{
+
+    border:0;
+
+    margin:0;
+
+}
+
+
+.feat svg{
+
+    width:36px;
+
+    height:36px;
+
+    stroke:var(--accent);
+
+    fill:none;
+
+    stroke-width:1.5;
+
+    margin-bottom:18px;
+
+}
+
+
+.feat h3{
+
+    font-family:var(--serif);
+
+    font-size:20px;
+
+    margin-bottom:8px;
+
+}
+
+
+.feat p{
+
+    color:var(--mute);
+
+    font-size:15px;
+
+}
+
+
+/* =====================================================
+   Banner
+   ===================================================== */
+
+.banner{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid var(--line);
+
+    overflow:hidden;
+
+}
+
+
+.banner .ph{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+
+.banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20,12,7,.9),
+            rgba(20,12,7,.2)
+        );
+
+}
+
+
+.banner-body{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:48px;
+
+    max-width:560px;
+
+}
+
+
+/* =====================================================
+   Explore
+   ===================================================== */
+
+.explore{
+
+    display:grid;
+
+    grid-template-columns:
+        1.25fr 1fr;
+
+    gap:64px;
+
+    align-items:center;
+
+}
+
+
+.explore .ph{
+
+    aspect-ratio:16/10;
+
+    border:1px solid var(--line);
+
+}
+
+
+.explore p{
+
+    margin:16px 0 30px;
+
+    color:var(--mute);
+
+    font-size:17px;
+
+}
+
+
+/* =====================================================
+   News
+   ===================================================== */
+
+.news li a{
+
+    display:flex;
+
+    gap:32px;
+
+    align-items:center;
+
+    padding:24px 4px;
+
+    border-top:
+        1px solid var(--line);
+
+}
+
+
+.news li:last-child a{
+
+    border-bottom:
+        1px solid var(--line);
+
+}
+
+
+.news time{
+
+    color:var(--accent);
+
+    min-width:110px;
+
+}
+
+
+/* =====================================================
+   Footer
+   ===================================================== */
+
+footer{
+
+    position:relative;
+
+    z-index:2;
+
+    background:
+        rgba(16,10,6,.92);
+
+    border-top:
+        1px solid var(--line);
+
+    padding:64px 0 32px;
+
+}
+
+
+.foot{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.foot-links{
+
+    display:flex;
+
+    gap:12px 32px;
+
+    flex-wrap:wrap;
+
+    color:var(--mute);
+
+}
+
+
+.social{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:22px;
+
+}
+
+
+.social a{
+
+    width:44px;
+
+    height:44px;
+
+    border:
+        1px solid var(--line);
+
+    display:grid;
+
+    place-items:center;
+
+}
+
+
+.social svg{
+
+    width:20px;
+
+    height:20px;
+
+    fill:var(--text);
+
+}
+
+
+.copy{
+
+    margin-top:48px;
+
+    padding-top:24px;
+
+    border-top:
+        1px solid var(--line);
+
+    color:var(--mute);
+
+}
+
+
+/* =====================================================
+   動畫
+   ===================================================== */
+
+#fx{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:3;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+}
+
+
+.rv{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+
+@keyframes bgBreath{
+
+    from{
+        transform:scale(1.035);
+    }
+
+    to{
+        transform:
+            scale(1.065)
+            translate3d(-.5%,-.35%,0);
+    }
+
+}
+
+
+/* =====================================================
+   Responsive
+   ===================================================== */
+
 @media(max-width:1024px){
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .feat-grid{grid-template-columns:repeat(2,1fr);row-gap:40px}
-  .feat:nth-child(2){border:0;margin:0}
-  .explore{grid-template-columns:1fr;gap:32px}
-  .menu,.auth{display:none}
-  .burger{display:flex}
-  .drawer{display:block;position:fixed;top:68px;left:0;right:0;background:rgba(20,12,7,.97);border-bottom:1px solid var(--line);padding:8px 20px 24px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:all .3s;z-index:49}
-  .drawer.open{transform:none;opacity:1;visibility:visible}
-  .drawer a.l{display:block;padding:16px 0;border-bottom:1px solid var(--line);font-size:17px}
-  .drawer .auth{display:flex;margin-top:20px}
-  .drawer .auth .btn{flex:1;min-height:48px}
+
+    .grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .feat-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:40px;
+
+    }
+
+
+    .feat{
+
+        border:0;
+
+        margin:0;
+
+    }
+
+
+    .explore{
+
+        grid-template-columns:1fr;
+
+        gap:32px;
+
+    }
+
+
+    .menu,
+
+    .nav>.auth{
+
+        display:none;
+
+    }
+
+
+    .burger{
+
+        display:flex;
+
+    }
+
+
+    .drawer{
+
+        display:block;
+
+        position:fixed;
+
+        top:68px;
+
+        left:0;
+
+        right:0;
+
+        background:
+            rgba(20,12,7,.97);
+
+        padding:8px 20px 24px;
+
+        transform:translateY(-12px);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transition:.3s;
+
+        z-index:49;
+
+    }
+
+
+    .drawer.open{
+
+        transform:none;
+
+        opacity:1;
+
+        visibility:visible;
+
+    }
+
+
+    .drawer a.l{
+
+        display:block;
+
+        padding:16px 0;
+
+        border-bottom:
+            1px solid var(--line);
+
+    }
+
+
+    .drawer .auth{
+
+        display:flex;
+
+        margin-top:20px;
+
+    }
+
+
+    .drawer .auth .btn{
+
+        flex:1;
+
+    }
+
 }
+
+
 @media(max-width:768px){
-  .bg-media{inset:0;opacity:.50;filter:saturate(.84) contrast(1.06) brightness(.60);animation:none}
-  .bg-glow{transform:none}
-  .bg::after{opacity:.035;background-size:64px 64px}
-  .banner{aspect-ratio:16/9;min-height:0}
-  section{padding:56px 0}
-  .grid{grid-template-columns:1fr;gap:8px}
-  .hero{align-items:flex-end;padding-bottom:110px}
-  .hero::after{background:linear-gradient(0deg,rgba(20,12,7,.95) 20%,rgba(20,12,7,.4) 70%,rgba(20,12,7,.25))}
-  .hero-ctrl{left:20px;right:20px;bottom:36px;justify-content:space-between}
-  .hero-btns .btn{flex:1}
-  .feat-grid{grid-template-columns:1fr}
-  .feat,.feat:nth-child(2){border:0;margin:0;padding:0}
-  .banner-body{padding:32px 24px}
-  .news li a{gap:16px;flex-direction:column;align-items:flex-start}
-  .tabs{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:4px}
-  .tab{flex:none}
+
+    section{
+
+        padding:34px 0;
+
+    }
+
+
+    .wrap{
+
+        width:
+            calc(100% - 28px);
+
+    }
+
+
+    .grid{
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+    }
+
+
+    .feat-grid{
+
+        grid-template-columns:1fr;
+
+        gap:24px;
+
+        margin-top:24px;
+
+    }
+
+
+    .hero{
+
+        align-items:flex-end;
+
+        padding-bottom:110px;
+
+    }
+
+
+    .hero::after{
+
+        background:
+            linear-gradient(
+                0deg,
+                rgba(20,12,7,.95) 20%,
+                rgba(20,12,7,.4) 70%,
+                rgba(20,12,7,.25)
+            );
+
+    }
+
+
+    .hero-ctrl{
+
+        left:14px;
+
+        right:14px;
+
+        bottom:28px;
+
+        justify-content:
+            space-between;
+
+    }
+
+
+    .hero-btns .btn{
+
+        flex:1;
+
+    }
+
+
+    .banner-body{
+
+        padding:32px 24px;
+
+    }
+
+
+    .news li a{
+
+        gap:10px;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+    .tabs{
+
+        flex-wrap:nowrap;
+
+        overflow-x:auto;
+
+        width:100%;
+
+    }
+
+    .explore{
+
+        gap:22px;
+
+    }
+
+    .explore p{
+
+        margin:12px 0 22px;
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .banner-body{
+
+        padding:24px 20px;
+
+    }
+
+
+    .tab{
+
+        flex:none;
+
+    }
+
+
+    .bg-media{
+
+        inset:0;
+
+        opacity:.5;
+
+        animation:none;
+
+    }
+
 }
+
+
+
+    .card-info{padding:15px 17px 17px;}
+    .card-name{font-size:21px;margin:2px 0 4px;}
+    .card-desc{font-size:14px;line-height:1.6;margin-bottom:6px;}
+    .card-go{min-height:38px;font-size:14px;}
+
+    #games{padding-top:44px;padding-bottom:44px;}
+    #events{padding-top:30px;padding-bottom:30px;}
+    #news{padding-top:24px;}
+@media(hover:none){
+
+    .card-desc{
+
+        max-height:none;
+
+        opacity:1;
+
+        margin-bottom:14px;
+
+    }
+
+}
+
+
 @media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important}
-  html{scroll-behavior:auto}
-  .rv{opacity:1;transform:none}
-  .bg-media{animation:none}
+
+    *{
+
+        animation:none!important;
+
+        transition:none!important;
+
+    }
+
+
+    html{
+
+        scroll-behavior:auto;
+
+    }
+
+
+    .rv{
+
+        opacity:1!important;
+
+        transform:none!important;
+
+    }
+
 }
+
 </style>
+
 </head>
+
+
 <body>
-<div class="bg" aria-hidden="true"><div class="bg-media" id="bgMedia"></div><div class="bg-glow"></div></div>
-<canvas id="fx" aria-hidden="true"></canvas>
+
+
+<!-- =====================================================
+     全站背景
+     ===================================================== -->
+
+<div class="bg" aria-hidden="true">
+
+    <div
+        class="bg-media"
+        id="bgMedia">
+    </div>
+
+    <div class="bg-glow"></div>
+
+</div>
+
+
+<canvas
+    id="fx"
+    aria-hidden="true">
+</canvas>
+
+
+<!-- =====================================================
+     Header
+     ===================================================== -->
 
 <header id="hd">
-  <div class="wrap nav">
-    <a href="#top" class="logo">
-      <img class="logo-img" alt="榮耀 Online" width="69" height="46" hidden>
-      <span class="logo-txt">榮耀 Online</span>
+
+<div class="wrap nav">
+
+
+<a href="#top" class="logo">
+
+    <img
+        class="logo-img"
+        alt="榮耀 Online"
+        width="180"
+        height="46"
+        hidden>
+
+    <span class="logo-txt">
+        榮耀 Online
+    </span>
+
+</a>
+
+
+<nav
+    class="menu"
+    aria-label="主選單">
+
+    <a href="#top">首頁</a>
+
+    <a href="#games">遊戲</a>
+
+    <a href="#hot">熱門遊戲</a>
+
+    <a href="#events">活動</a>
+
+    <a href="#news">公告</a>
+
+</nav>
+
+
+<div class="auth">
+
+    <a
+        class="btn"
+        href="https://go.246.com.tw/register?promo=car1">
+        登入
     </a>
-    <nav class="menu" aria-label="主選單">
-      <a href="#top">首頁</a>
-      <a href="#games">遊戲</a>
-      <a href="#hot">熱門遊戲</a>
-      <a href="#events">活動</a>
-      <a href="#news">公告</a>
-    </nav>
-    <div class="auth">
-      <a class="btn" href="https://go.246.com.tw/register?promo=car1">登入</a>
-      <a class="btn primary" href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a>
-    </div>
-    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false"><i></i><i></i><i></i></button>
-  </div>
-  <div class="drawer" id="drawer">
+
+    <a
+        class="btn primary"
+        href="https://lin.ee/5fEfP6L"
+        target="_blank"
+        rel="noopener">
+        客服
+    </a>
+
+</div>
+
+
+<button
+    class="burger"
+    id="burger"
+    type="button"
+    aria-label="開啟選單"
+    aria-expanded="false">
+
+    <i></i>
+    <i></i>
+    <i></i>
+
+</button>
+
+
+</div>
+
+
+<div
+    class="drawer"
+    id="drawer">
+
     <a class="l" href="#top">首頁</a>
+
     <a class="l" href="#games">遊戲</a>
+
     <a class="l" href="#hot">熱門遊戲</a>
+
     <a class="l" href="#events">活動</a>
+
     <a class="l" href="#news">公告</a>
+
     <div class="auth">
-      <a class="btn" href="https://go.246.com.tw/register?promo=car1">登入</a>
-      <a class="btn primary" href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a>
+
+        <a
+            class="btn"
+            href="https://go.246.com.tw/register?promo=car1">
+            登入
+        </a>
+
+        <a
+            class="btn primary"
+            href="https://lin.ee/5fEfP6L"
+            target="_blank"
+            rel="noopener">
+            客服
+        </a>
+
     </div>
-  </div>
+
+</div>
+
 </header>
 
+
 <main id="top">
-  <section class="hero" aria-label="主視覺">
-    <div id="slides"></div>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section
+    class="hero"
+    aria-label="主視覺">
+
+    <div
+        class="slides"
+        id="slides">
+    </div>
+
+
     <div class="wrap hero-body">
-      <div class="hero-game" id="heroGame">GAME 01</div>
-      <h1>榮耀 Online<br>踏入全新的遊戲世界</h1>
-      <p>探索角色、世界與精彩冒險。</p>
-      <div class="hero-btns">
-        <a class="btn primary" href="https://go.246.com.tw/register?promo=car1">開始遊戲</a>
-        <a class="btn" href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">交流社群</a>
-      </div>
+
+        <div
+            class="hero-game"
+            id="heroGame">
+            GAME 01
+        </div>
+
+
+        <h1>
+            榮耀 Online<br>
+            踏入全新的遊戲世界
+        </h1>
+
+
+        <p>
+            探索角色、世界與精彩冒險。
+        </p>
+
+
+        <div class="hero-btns">
+
+            <a
+                class="btn primary"
+                href="https://go.246.com.tw/register?promo=car1">
+                開始遊戲
+            </a>
+
+            <a
+                class="btn"
+                href="https://lin.ee/5fEfP6L"
+                target="_blank"
+                rel="noopener">
+                交流社群
+            </a>
+
+        </div>
+
     </div>
+
+
     <div class="hero-ctrl">
-      <div class="dots" id="dots"></div>
-      <button class="arrow" id="prev" aria-label="上一張">&#8592;</button>
-      <button class="arrow" id="next" aria-label="下一張">&#8594;</button>
-    </div>
-  </section>
 
-  <section id="games" aria-labelledby="hot">
-    <div class="wrap">
-      <div class="sec-head rv">
-        <h2 id="hot">熱門遊戲</h2>
-        <div class="tabs" id="tabs" aria-label="遊戲分類">
-          <button type="button" class="tab on" data-filter="all" aria-pressed="true">全部</button>
-          <button type="button" class="tab" data-filter="MMORPG" aria-pressed="false">MMORPG</button>
-          <button type="button" class="tab" data-filter="RPG" aria-pressed="false">RPG</button>
-          <button type="button" class="tab" data-filter="Action" aria-pressed="false">Action</button>
-          <button type="button" class="tab" data-filter="Adventure" aria-pressed="false">Adventure</button>
-          <button type="button" class="tab" data-filter="Strategy" aria-pressed="false">Strategy</button>
+        <div
+            class="dots"
+            id="dots">
         </div>
-      </div>
-      <div class="grid" id="grid">
-        <a class="card rv" href="#" data-cat="MMORPG">
-          <div class="ph"><img data-img="game1" alt="魔童哪吒 Fantasy MMORPG" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <div class="card-info">
-            <span class="card-type">Fantasy MMORPG</span>
-            <h3 class="card-name">魔童哪吒</h3>
-            <p class="card-desc">與數萬名玩家同行，征服廣闊的奇幻大陸，體驗高速戰鬥與角色養成。</p>
-            <span class="card-go">開始遊戲</span>
-          </div>
-        </a>
-        <a class="card rv" href="#" data-cat="Action">
-          <div class="ph"><img data-img="game2" alt="電音虎王 Action RPG" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <div class="card-info">
-            <span class="card-type">Action RPG</span>
-            <h3 class="card-name">電音虎王</h3>
-            <p class="card-desc">自由探索無縫世界，找出隱藏的故事，享受節奏明快的動作體驗。</p>
-            <span class="card-go">開始遊戲</span>
-          </div>
-        </a>
-        <a class="card rv" href="#" data-cat="Adventure">
-          <div class="ph"><img data-img="game3" alt="黃金城之謎 Open World" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <div class="card-info">
-            <span class="card-type">Open World</span>
-            <h3 class="card-name">黃金城之謎</h3>
-            <p class="card-desc">自由探索廣闊世界，結合機率與策略，掌握你的爆率節點。</p>
-            <span class="card-go">開始遊戲</span>
-          </div>
-        </a>
-        <a class="card rv" href="#" data-cat="Strategy">
-          <div class="ph"><img data-img="game4" alt="月兔 Strategy" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <div class="card-info">
-            <span class="card-type">Strategy</span>
-            <h3 class="card-name">月兔</h3>
-            <p class="card-desc">調度軍團、經營領地，用策略決定勝負。</p>
-            <span class="card-go">開始遊戲</span>
-          </div>
-        </a>
-        <a class="card rv" href="#" data-cat="Adventure">
-          <div class="ph"><img data-img="game5" alt="惡魔之門 Adventure" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <div class="card-info">
-            <span class="card-type">Adventure</span>
-            <h3 class="card-name">惡魔之門</h3>
-            <p class="card-desc">跟隨主角踏上旅程，解開古老遺跡的謎團，挑戰極限倍率。</p>
-            <span class="card-go">開始遊戲</span>
-          </div>
-        </a>
-        <a class="card rv" href="#" data-cat="RPG">
-          <div class="ph"><img data-img="game6" alt="財神賀歲 Online RPG" width="1280" height="720" loading="lazy" decoding="async"></div>
-          <div class="card-info">
-            <span class="card-type">Online RPG</span>
-            <h3 class="card-name">財神賀歲</h3>
-            <p class="card-desc">組隊挑戰副本，打造專屬角色，與好友一起探索遊戲世界。</p>
-            <span class="card-go">開始遊戲</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <section class="features" aria-labelledby="why">
-    <div class="wrap">
-      <h2 class="rv" id="why">為什麼選擇我們？</h2>
-      <p class="lead rv">榮耀 Online 提供熱門電子遊戲、精彩娛樂玩法與多樣優惠活動，整合 MMORPG、動作 RPG、冒險與策略等多種線上遊戲，一個帳號即可進入，並定期更新內容與活動。</p>
-      <div class="feat-grid">
-        <div class="feat rv"><svg viewBox="0 0 36 36"><rect x="4" y="6" width="28" height="20" rx="2"/><path d="M12 31h12M18 26v5M13 16l4 4 6-8"/></svg><h3>豐富遊戲</h3><p>多種類型遊戲集中在同一個平台，包含百家樂、輪盤、骰寶等熱門玩法，由專業荷官即時開局，打造最真實的線上賭場體驗。</p></div>
-        <div class="feat rv"><svg viewBox="0 0 36 36"><path d="M18 4l4 9 10 1-7.5 6.5L27 30l-9-5-9 5 2.5-9.5L4 14l10-1z"/></svg><h3>多元玩法</h3><p>角色扮演、動作、策略與冒險，涵蓋全球熱門賽事，提供多元下注玩法與即時賠率更新，讓玩家掌握最佳時機。</p></div>
-        <div class="feat rv"><svg viewBox="0 0 36 36"><path d="M18 3l12 5v9c0 8-5 13-12 16C11 30 6 25 6 17V8z"/><path d="M12 18l4 4 8-8"/></svg><h3>穩定體驗</h3><p>伺服器穩定運作，連線順暢，支援真人對戰與即時互動，讓玩家感受最真實的博弈體驗。</p></div>
-        <div class="feat rv"><svg viewBox="0 0 36 36"><path d="M30 18a12 12 0 1 1-4-9"/><path d="M27 3v7h-7"/></svg><h3>持續更新</h3><p>定期推出新遊戲、新內容與限定活動，結合即時射擊與倍率獎勵系統，帶來刺激又有成就感的遊戲體驗。</p></div>
-      </div>
-    </div>
-  </section>
+        <button
+            class="arrow"
+            id="prev"
+            type="button">
+            ←
+        </button>
 
-  <section id="events" aria-label="最新活動">
-    <div class="wrap">
-      <div class="banner rv">
-        <div class="ph" aria-hidden="true"><img data-img="banner" alt="最新活動 Banner" width="1280" height="714" loading="lazy" decoding="async"></div>
-        <div class="banner-body">
-          <h2>最新活動</h2>
-          <p>探索最新遊戲內容與限定活動</p>
-          <a class="btn primary" href="#">查看活動</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <button
+            class="arrow"
+            id="next"
+            type="button">
+            →
+        </button>
 
-  <section style="padding-top:0">
-    <div class="wrap explore">
-      <div class="ph rv"><img data-img="hero2" alt="榮耀 Online 遊戲場景" width="1280" height="800" loading="lazy" decoding="async"></div>
-      <div class="rv">
-        <h2>探索全新世界</h2>
-        <p>進入充滿冒險、角色與故事的線上遊戲世界。在榮耀 Online，你可以選擇喜歡的遊戲類型，結識其他玩家，一起完成任務、挑戰副本與參加限定活動。</p>
-        <a class="btn primary" href="#games">開始探索</a>
-      </div>
     </div>
-  </section>
 
-  <section id="news" style="padding-top:0" aria-labelledby="news-title">
-    <div class="wrap">
-      <div class="sec-head rv"><h2 id="news-title">最新公告</h2></div>
-      <ul class="news rv" id="newsList">
-        <li><a href="#"><time datetime="2026-10-06">2026.10.06</time><span>平台更新公告</span></a></li>
-        <li><a href="#"><time datetime="2026-10-01">2026.10.01</time><span>新遊戲上線</span></a></li>
-        <li><a href="#"><time datetime="2026-09-28">2026.09.28</time><span>活動公告</span></a></li>
-      </ul>
+</section>
+
+
+<!-- =====================================================
+     遊戲
+     ===================================================== -->
+
+<section
+    id="games"
+    aria-labelledby="hot">
+
+<div class="wrap">
+
+
+<div class="sec-head rv">
+
+    <h2 id="hot">
+        熱門遊戲
+    </h2>
+
+
+    <div
+        class="tabs"
+        id="tabs">
+
+        <button
+            class="tab on"
+            data-filter="all"
+            aria-pressed="true"
+            type="button">
+            全部
+        </button>
+
+        <button
+            class="tab"
+            data-filter="MMORPG"
+            aria-pressed="false"
+            type="button">
+            MMORPG
+        </button>
+
+        <button
+            class="tab"
+            data-filter="RPG"
+            aria-pressed="false"
+            type="button">
+            RPG
+        </button>
+
+        <button
+            class="tab"
+            data-filter="Action"
+            aria-pressed="false"
+            type="button">
+            Action
+        </button>
+
+        <button
+            class="tab"
+            data-filter="Adventure"
+            aria-pressed="false"
+            type="button">
+            Adventure
+        </button>
+
+        <button
+            class="tab"
+            data-filter="Strategy"
+            aria-pressed="false"
+            type="button">
+            Strategy
+        </button>
+
     </div>
-  </section>
+
+</div>
+
+
+<div
+    class="grid"
+    id="grid">
+
+
+<!-- GAME 01 -->
+
+<a
+    class="card rv"
+    href="#"
+    data-cat="MMORPG">
+
+    <div class="ph">
+
+        <img
+            data-img="game1"
+            alt="魔童哪吒 Fantasy MMORPG 遊戲封面"
+            width="1280"
+            height="720"
+            loading="lazy">
+
+    </div>
+
+
+    <div class="card-info">
+
+        <span class="card-type">
+            Fantasy MMORPG
+        </span>
+
+        <h3 class="card-name">
+            魔童哪吒
+        </h3>
+
+        <p class="card-desc">
+            與玩家同行，探索廣闊奇幻大陸，
+            體驗高速戰鬥與角色養成。
+        </p>
+
+        <span class="card-go">
+            開始遊戲
+        </span>
+
+    </div>
+
+</a>
+
+
+<!-- GAME 02 -->
+
+<a
+    class="card rv"
+    href="#"
+    data-cat="Action">
+
+    <div class="ph">
+
+        <img
+            data-img="game2"
+            alt="電音虎王 Action RPG 遊戲封面"
+            width="1280"
+            height="720"
+            loading="lazy">
+
+    </div>
+
+
+    <div class="card-info">
+
+        <span class="card-type">
+            Action RPG
+        </span>
+
+        <h3 class="card-name">
+            電音虎王
+        </h3>
+
+        <p class="card-desc">
+            探索世界、尋找隱藏故事，
+            享受節奏明快的動作遊戲體驗。
+        </p>
+
+        <span class="card-go">
+            開始遊戲
+        </span>
+
+    </div>
+
+</a>
+
+
+<!-- GAME 03 -->
+
+<a
+    class="card rv"
+    href="#"
+    data-cat="Adventure">
+
+    <div class="ph">
+
+        <img
+            data-img="game3"
+            alt="黃金城之謎 Open World 遊戲封面"
+            width="1280"
+            height="720"
+            loading="lazy">
+
+    </div>
+
+
+    <div class="card-info">
+
+        <span class="card-type">
+            Open World
+        </span>
+
+        <h3 class="card-name">
+            黃金城之謎
+        </h3>
+
+        <p class="card-desc">
+            自由探索廣闊世界，
+            尋找隱藏故事與未知冒險。
+        </p>
+
+        <span class="card-go">
+            開始遊戲
+        </span>
+
+    </div>
+
+</a>
+
+
+<!-- GAME 04 -->
+
+<a
+    class="card rv"
+    href="#"
+    data-cat="Strategy">
+
+    <div class="ph">
+
+        <img
+            data-img="game4"
+            alt="月兔 Strategy 遊戲封面"
+            width="1280"
+            height="720"
+            loading="lazy">
+
+    </div>
+
+
+    <div class="card-info">
+
+        <span class="card-type">
+            Strategy
+        </span>
+
+        <h3 class="card-name">
+            月兔
+        </h3>
+
+        <p class="card-desc">
+            調度軍團、經營領地，
+            用策略決定勝負。
+        </p>
+
+        <span class="card-go">
+            開始遊戲
+        </span>
+
+    </div>
+
+</a>
+
+
+<!-- GAME 05 -->
+
+<a
+    class="card rv"
+    href="#"
+    data-cat="Adventure">
+
+    <div class="ph">
+
+        <img
+            data-img="game5"
+            alt="惡魔之門 Adventure 遊戲封面"
+            width="1280"
+            height="720"
+            loading="lazy">
+
+    </div>
+
+
+    <div class="card-info">
+
+        <span class="card-type">
+            Adventure
+        </span>
+
+        <h3 class="card-name">
+            惡魔之門
+        </h3>
+
+        <p class="card-desc">
+            跟隨主角踏上旅程，
+            解開古老遺跡謎團。
+        </p>
+
+        <span class="card-go">
+            開始遊戲
+        </span>
+
+    </div>
+
+</a>
+
+
+<!-- GAME 06 -->
+
+<a
+    class="card rv"
+    href="#"
+    data-cat="RPG">
+
+    <div class="ph">
+
+        <img
+            data-img="game6"
+            alt="財神賀歲 Online RPG 遊戲封面"
+            width="1280"
+            height="720"
+            loading="lazy">
+
+    </div>
+
+
+    <div class="card-info">
+
+        <span class="card-type">
+            Online RPG
+        </span>
+
+        <h3 class="card-name">
+            財神賀歲
+        </h3>
+
+        <p class="card-desc">
+            組隊挑戰副本，
+            打造專屬角色，
+            與朋友一起探索遊戲世界。
+        </p>
+
+        <span class="card-go">
+            開始遊戲
+        </span>
+
+    </div>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     特色
+     ===================================================== -->
+
+<section
+    class="features"
+    aria-labelledby="why">
+
+<div class="wrap">
+
+<h2
+    class="rv"
+    id="why">
+    為什麼選擇我們？
+</h2>
+
+
+<p class="lead rv">
+
+榮耀 Online 提供多種類型的線上遊戲內容，
+整合 MMORPG、動作 RPG、冒險與策略等玩法，
+並持續更新遊戲與活動。
+
+</p>
+
+
+<div class="feat-grid">
+
+
+<div class="feat rv">
+
+<svg viewBox="0 0 36 36">
+<rect x="4" y="6" width="28" height="20" rx="2"/>
+<path d="M12 31h12M18 26v5M13 16l4 4 6-8"/>
+</svg>
+
+<h3>
+豐富遊戲
+</h3>
+
+<p>
+多種類型遊戲集中在同一個平台，
+方便探索不同世界與玩法。
+</p>
+
+</div>
+
+
+<div class="feat rv">
+
+<svg viewBox="0 0 36 36">
+<path d="M18 4l4 9 10 1-7.5 6.5L27 30l-9-5-9 5 2.5-9.5L4 14l10-1z"/>
+</svg>
+
+<h3>
+多元玩法
+</h3>
+
+<p>
+角色扮演、動作、策略與冒險，
+每種玩法都有對應的遊戲體驗。
+</p>
+
+</div>
+
+
+<div class="feat rv">
+
+<svg viewBox="0 0 36 36">
+<path d="M18 3l12 5v9c0 8-5 13-12 16C11 30 6 25 6 17V8z"/>
+<path d="M12 18l4 4 8-8"/>
+</svg>
+
+<h3>
+穩定體驗
+</h3>
+
+<p>
+以清楚的介面與流暢的操作，
+讓玩家更容易進入遊戲內容。
+</p>
+
+</div>
+
+
+<div class="feat rv">
+
+<svg viewBox="0 0 36 36">
+<path d="M30 18a12 12 0 1 1-4-9"/>
+<path d="M27 3v7h-7"/>
+</svg>
+
+<h3>
+持續更新
+</h3>
+
+<p>
+定期推出新遊戲、新內容與限定活動，
+保持平台的新鮮感。
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     活動
+     ===================================================== -->
+
+<section id="events">
+
+<div class="wrap">
+
+<div class="banner rv">
+
+<div class="ph">
+
+<img
+    data-img="banner"
+    alt="最新活動 Banner"
+    width="1280"
+    height="714"
+    loading="lazy">
+
+</div>
+
+
+<div class="banner-body">
+
+<h2>
+最新活動
+</h2>
+
+<p>
+探索最新遊戲內容與限定活動。
+</p>
+
+<a
+    class="btn primary"
+    href="#">
+    查看活動
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     Explore
+     ===================================================== -->
+
+<section style="padding-top:0">
+
+<div class="wrap explore">
+
+
+<div class="ph rv">
+
+<img
+    data-img="explore"
+    alt="榮耀 Online 遊戲場景"
+    width="1280"
+    height="800"
+    loading="lazy">
+
+</div>
+
+
+<div class="rv">
+
+<h2>
+探索全新世界
+</h2>
+
+<p>
+
+進入充滿冒險、角色與故事的線上遊戲世界。
+
+在榮耀 Online，你可以選擇喜歡的遊戲類型，
+結識其他玩家，一起完成任務、挑戰副本與參加限定活動。
+
+</p>
+
+
+<a
+    class="btn primary"
+    href="#games">
+
+開始探索
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     公告
+     ===================================================== -->
+
+<section
+    id="news"
+    style="padding-top:0">
+
+<div class="wrap">
+
+<div class="sec-head rv">
+
+<h2>
+最新公告
+</h2>
+
+</div>
+
+
+<ul class="news rv">
+
+<li>
+
+<a href="#">
+
+<time datetime="2026-10-06">
+2026.10.06
+</time>
+
+<span>
+平台更新公告
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#">
+
+<time datetime="2026-10-01">
+2026.10.01
+</time>
+
+<span>
+新遊戲上線
+</span>
+
+</a>
+
+</li>
+
+
+<li>
+
+<a href="#">
+
+<time datetime="2026-09-28">
+2026.09.28
+</time>
+
+<span>
+活動公告
+</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
 </main>
 
+
+<!-- =====================================================
+     Footer
+     ===================================================== -->
+
 <footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <a href="#top" class="logo"><img class="logo-img" alt="榮耀 Online" width="69" height="46" hidden><span class="logo-txt">榮耀 Online</span></a>
-        <div class="social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.5-3.2h-3.2V8.7c0-.9.4-1.7 1.8-1.7h1.5V4.2S15.5 4 14.3 4C11.8 4 10.2 5.5 10.2 8.1v2.7H7.5V14h2.7v8z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zM17.2 5.8a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM16.5 2h-9A5.5 5.5 0 0 0 2 7.5v9A5.5 5.5 0 0 0 7.5 22h9a5.5 5.5 0 0 0 5.5-5.5v-9A5.5 5.5 0 0 0 16.5 2zm3.8 14.5a3.8 3.8 0 0 1-3.8 3.8h-9a3.8 3.8 0 0 1-3.8-3.8v-9a3.8 3.8 0 0 1 3.8-3.8h9a3.8 3.8 0 0 1 3.8 3.8z"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg></a>
-          <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24"><path d="M19.3 5.3A16 16 0 0 0 15.4 4l-.5 1a14.8 14.8 0 0 0-4.4 0l-.5-1a16 16 0 0 0-3.9 1.3C3.6 9 2.9 12.6 3.2 16.1a16 16 0 0 0 4.8 2.4l1-1.6a10 10 0 0 1-1.6-.8l.4-.3a11.4 11.4 0 0 0 9.8 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 0 0 4.8-2.4c.4-4-.7-7.5-2.9-10.8zM9.3 14c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.6.8 1.6 1.8-.7 1.8-1.6 1.8zm5.4 0c-.9 0-1.6-.8-1.6-1.8s.7-1.8 1.6-1.8 1.6.8 1.6 1.8-.7 1.8-1.6 1.8z"/></svg></a>
-        </div>
-      </div>
-      <nav class="foot-links" aria-label="頁尾連結">
-        <a href="#">關於平台</a><a href="#games">遊戲</a><a href="#events">活動</a><a href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a><a href="#">使用條款</a><a href="#">隱私政策</a>
-      </nav>
-    </div>
-    <div class="copy">© 2026 榮耀 Online</div>
-  </div>
+
+<div class="wrap">
+
+
+<div class="foot">
+
+
+<div>
+
+<a
+    href="#top"
+    class="logo">
+
+<img
+    class="logo-img"
+    alt="榮耀 Online"
+    width="180"
+    height="46"
+    hidden>
+
+<span class="logo-txt">
+榮耀 Online
+</span>
+
+</a>
+
+
+<div class="social">
+
+<a href="#" aria-label="Facebook">
+Facebook
+</a>
+
+<a href="#" aria-label="Instagram">
+Instagram
+</a>
+
+<a href="#" aria-label="YouTube">
+YouTube
+</a>
+
+<a href="#" aria-label="Discord">
+Discord
+</a>
+
+</div>
+
+</div>
+
+
+<nav
+    class="foot-links"
+    aria-label="頁尾連結">
+
+<a href="#">
+關於平台
+</a>
+
+<a href="#games">
+遊戲
+</a>
+
+<a href="#events">
+活動
+</a>
+
+<a
+    href="https://lin.ee/5fEfP6L"
+    target="_blank"
+    rel="noopener">
+客服
+</a>
+
+<a href="#">
+使用條款
+</a>
+
+<a href="#">
+隱私政策
+</a>
+
+</nav>
+
+
+</div>
+
+
+<div class="copy">
+
+© 2026 榮耀 Online
+
+</div>
+
+
+</div>
+
 </footer>
 
+
 <script>
-function setImg(box,url,alt){if(!url||/^YOUR_/.test(url))return;const im=new Image();im.alt=alt||"";im.loading="lazy";im.onload=()=>box.appendChild(im);im.src=url}
-document.querySelectorAll(".logo").forEach(a=>{const im=a.querySelector(".logo-img"),tx=a.querySelector(".logo-txt");if(!SITE_IMAGES.logo||/^YOUR_/.test(SITE_IMAGES.logo))return;im.onload=()=>{im.hidden=false;tx.style.display="none"};im.src=SITE_IMAGES.logo});
-(function(){const m=document.getElementById("bgMedia");if(BG_VIDEO){const v=document.createElement("video");v.src=BG_VIDEO;v.autoplay=v.muted=v.loop=v.playsInline=true;v.setAttribute("muted","");m.appendChild(v);v.play().catch(()=>{})}else if(SITE_IMAGES.background&&!/^YOUR_/.test(SITE_IMAGES.background)){m.style.backgroundImage='url("'+SITE_IMAGES.background+'")';}let t=false;addEventListener("scroll",()=>{if(t)return;t=true;requestAnimationFrame(()=>{document.documentElement.style.setProperty("--sy",scrollY);t=false})},{passive:true})})();
-const hd=document.getElementById("hd");addEventListener("scroll",()=>hd.classList.toggle("solid",scrollY>40),{passive:true});
-const burger=document.getElementById("burger"),drawer=document.getElementById("drawer");
-function toggleMenu(open){burger.classList.toggle("open",open);drawer.classList.toggle("open",open);burger.setAttribute("aria-expanded",open)}
-burger.onclick=()=>toggleMenu(!drawer.classList.contains("open"));
-drawer.querySelectorAll("a.l").forEach(a=>a.onclick=()=>toggleMenu(false));
-const slidesEl=document.getElementById("slides"),dotsEl=document.getElementById("dots"),heroGame=document.getElementById("heroGame");
-let cur=0,timer;
-HERO_SLIDES.forEach((s,i)=>{const d=document.createElement("div");d.className="slide"+(i===0?" on":"");const p=document.createElement("div");p.className="ph";d.appendChild(p);setImg(p,s.img,s.name);slidesEl.appendChild(d);const b=document.createElement("button");b.setAttribute("aria-label","第"+(i+1)+"張");b.onclick=()=>{go(i);restart()};dotsEl.appendChild(b)});
-function go(n){cur=(n+HERO_SLIDES.length)%HERO_SLIDES.length;slidesEl.querySelectorAll(".slide").forEach((e,i)=>e.classList.toggle("on",i===cur));dotsEl.querySelectorAll("button").forEach((e,i)=>e.classList.toggle("on",i===cur));heroGame.textContent=HERO_SLIDES[cur].name}
-function restart(){clearInterval(timer);timer=setInterval(()=>go(cur+1),5000)}
-document.getElementById("prev").onclick=()=>{go(cur-1);restart()};
-document.getElementById("next").onclick=()=>{go(cur+1);restart()};
-go(0);restart();
-(function(){if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;const c=document.getElementById("fx"),x=c.getContext("2d");let w,h,ps=[];function size(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;const n=w<768?18:42;ps=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.4,v:Math.random()*.35+.1,a:Math.random()*.5+.15}))}size();addEventListener("resize",size);(function tick(){x.clearRect(0,0,w,h);ps.forEach(p=>{p.y-=p.v;p.x+=Math.sin(p.y/60)*.15;if(p.y<-5){p.y=h+5;p.x=Math.random()*w}x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fillStyle="rgba(255,205,120,"+p.a+")";x.fill()});requestAnimationFrame(tick)})()})();
-document.querySelectorAll("img[data-img]").forEach(im=>{const url=SITE_IMAGES[im.dataset.img];if(!url||/^YOUR_/.test(url)){im.remove();return}im.src=url});
-const cards=document.querySelectorAll("#grid .card"),tabBtns=document.querySelectorAll("#tabs .tab");
-tabBtns.forEach(btn=>{btn.addEventListener("click",()=>{tabBtns.forEach(t=>{const on=t===btn;t.classList.toggle("on",on);t.setAttribute("aria-pressed",on)});cards.forEach(card=>{const show=btn.dataset.filter==="all"||card.dataset.cat===btn.dataset.filter;card.classList.toggle("hide",!show);if(show)card.classList.add("in")})})});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+
+/* =====================================================
+   工具
+   ===================================================== */
+
+function validUrl(url){
+
+    return (
+        typeof url === "string" &&
+        url.trim() !== "" &&
+        !/^YOUR_/i.test(url)
+    );
+
+}
+
+
+/* =====================================================
+   Logo
+   ===================================================== */
+
+document
+.querySelectorAll(".logo")
+.forEach(logo=>{
+
+    const img =
+        logo.querySelector(".logo-img");
+
+    const text =
+        logo.querySelector(".logo-txt");
+
+
+    if(!validUrl(SITE_IMAGES.logo))
+        return;
+
+
+    img.onload=()=>{
+
+        img.hidden=false;
+
+        text.style.display="none";
+
+    };
+
+
+    img.onerror=()=>{
+
+        img.hidden=true;
+
+        text.style.display="";
+
+    };
+
+
+    img.src=SITE_IMAGES.logo;
+
+});
+
+
+/* =====================================================
+   全站背景
+   ===================================================== */
+
+(function(){
+
+    const media =
+        document.getElementById("bgMedia");
+
+
+    if(validUrl(BG_VIDEO)){
+
+        const video =
+            document.createElement("video");
+
+
+        video.src=BG_VIDEO;
+
+        video.autoplay=true;
+
+        video.muted=true;
+
+        video.loop=true;
+
+        video.playsInline=true;
+
+
+        media.appendChild(video);
+
+
+        video.play().catch(()=>{});
+
+
+    }
+
+    else if(
+        validUrl(
+            SITE_IMAGES.background
+        )
+    ){
+
+        media.style.backgroundImage =
+            'url("' +
+            SITE_IMAGES.background +
+            '")';
+
+    }
+
+})();
+
+
+/* =====================================================
+   Header
+   ===================================================== */
+
+const hd =
+    document.getElementById("hd");
+
+
+window.addEventListener(
+    "scroll",
+    ()=>{
+        hd.classList.toggle(
+            "solid",
+            window.scrollY > 40
+        );
+    },
+    {passive:true}
+);
+
+
+/* =====================================================
+   手機選單
+   ===================================================== */
+
+const burger =
+    document.getElementById("burger");
+
+const drawer =
+    document.getElementById("drawer");
+
+
+function toggleMenu(open){
+
+    burger.classList.toggle(
+        "open",
+        open
+    );
+
+    drawer.classList.toggle(
+        "open",
+        open
+    );
+
+    burger.setAttribute(
+        "aria-expanded",
+        String(open)
+    );
+
+}
+
+
+burger.addEventListener(
+    "click",
+    ()=>{
+        toggleMenu(
+            !drawer.classList.contains("open")
+        );
+    }
+);
+
+
+drawer
+.querySelectorAll("a.l")
+.forEach(link=>{
+
+    link.addEventListener(
+        "click",
+        ()=>{
+            toggleMenu(false);
+        }
+    );
+
+});
+
+
+/* =====================================================
+   Hero
+   ===================================================== */
+
+const slidesEl =
+    document.getElementById("slides");
+
+const dotsEl =
+    document.getElementById("dots");
+
+const heroGame =
+    document.getElementById("heroGame");
+
+
+let currentSlide=0;
+
+let heroTimer=null;
+
+
+HERO_SLIDES.forEach(
+    (slide,index)=>{
+
+        const item =
+            document.createElement("div");
+
+        item.className =
+            "slide" +
+            (index===0 ? " on" : "");
+
+
+        const ph =
+            document.createElement("div");
+
+        ph.className="ph";
+
+
+        const img =
+            document.createElement("img");
+
+
+        img.alt=slide.name;
+
+        img.width=1920;
+
+        img.height=1080;
+
+        img.loading =
+            index===0
+            ? "eager"
+            : "lazy";
+
+
+        if(validUrl(slide.img)){
+
+            img.src=slide.img;
+
+        }
+
+
+        ph.appendChild(img);
+
+        item.appendChild(ph);
+
+        slidesEl.appendChild(item);
+
+
+        const dot =
+            document.createElement("button");
+
+
+        dot.type="button";
+
+        dot.setAttribute(
+            "aria-label",
+            "第 " +
+            (index+1) +
+            " 張"
+        );
+
+
+        dot.addEventListener(
+            "click",
+            ()=>{
+                go(index);
+
+                restartHero();
+            }
+        );
+
+
+        dotsEl.appendChild(dot);
+
+    }
+);
+
+
+function go(index){
+
+    currentSlide =
+        (
+            index +
+            HERO_SLIDES.length
+        )
+        %
+        HERO_SLIDES.length;
+
+
+    slidesEl
+    .querySelectorAll(".slide")
+    .forEach(
+        (el,i)=>{
+
+            el.classList.toggle(
+                "on",
+                i===currentSlide
+            );
+
+        }
+    );
+
+
+    dotsEl
+    .querySelectorAll("button")
+    .forEach(
+        (el,i)=>{
+
+            el.classList.toggle(
+                "on",
+                i===currentSlide
+            );
+
+        }
+    );
+
+
+    heroGame.textContent =
+        HERO_SLIDES[
+            currentSlide
+        ].name;
+
+}
+
+
+function restartHero(){
+
+    clearInterval(heroTimer);
+
+
+    heroTimer =
+        setInterval(
+            ()=>{
+                go(
+                    currentSlide+1
+                );
+            },
+            5000
+        );
+
+}
+
+
+document
+.getElementById("prev")
+.addEventListener(
+    "click",
+    ()=>{
+        go(currentSlide-1);
+        restartHero();
+    }
+);
+
+
+document
+.getElementById("next")
+.addEventListener(
+    "click",
+    ()=>{
+        go(currentSlide+1);
+        restartHero();
+    }
+);
+
+
+go(0);
+
+restartHero();
+
+
+/* =====================================================
+   一般圖片
+   ===================================================== */
+
+document
+.querySelectorAll("img[data-img]")
+.forEach(img=>{
+
+    const key =
+        img.dataset.img;
+
+
+    const url =
+        SITE_IMAGES[key];
+
+
+    if(!validUrl(url)){
+
+        img.remove();
+
+        return;
+
+    }
+
+
+    img.onerror=()=>{
+
+        img.remove();
+
+    };
+
+
+    img.src=url;
+
+});
+
+
+/* =====================================================
+   遊戲分類
+   ===================================================== */
+
+const cards =
+    document.querySelectorAll(
+        "#grid .card"
+    );
+
+
+const tabs =
+    document.querySelectorAll(
+        "#tabs .tab"
+    );
+
+
+tabs.forEach(button=>{
+
+    button.addEventListener(
+        "click",
+        ()=>{
+
+            const filter =
+                button.dataset.filter;
+
+
+            tabs.forEach(tab=>{
+
+                const active =
+                    tab===button;
+
+
+                tab.classList.toggle(
+                    "on",
+                    active
+                );
+
+
+                tab.setAttribute(
+                    "aria-pressed",
+                    String(active)
+                );
+
+            });
+
+
+            cards.forEach(card=>{
+
+                const show =
+                    filter==="all" ||
+                    card.dataset.cat===filter;
+
+
+                card.classList.toggle(
+                    "hide",
+                    !show
+                );
+
+
+                if(show){
+
+                    card.classList.add(
+                        "in"
+                    );
+
+                }
+
+            });
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   Scroll Reveal
+   ===================================================== */
+/* 保持內容預設可見，避免動畫尚未觸發時產生大片空白。 */
+document.querySelectorAll(".rv").forEach(el=>el.classList.add("in"));
+
+
+/* =====================================================
+   粒子效果
+   ===================================================== */
+
+(function(){
+
+    if(
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    )
+        return;
+
+
+    const canvas =
+        document.getElementById("fx");
+
+
+    const ctx =
+        canvas.getContext("2d");
+
+
+    if(!ctx)
+        return;
+
+
+    let width=0;
+
+    let height=0;
+
+    let particles=[];
+
+
+    function resize(){
+
+        width =
+            canvas.width =
+            window.innerWidth;
+
+
+        height =
+            canvas.height =
+            window.innerHeight;
+
+
+        const count =
+            width<768
+            ? 18
+            : 42;
+
+
+        particles =
+            Array.from(
+                {
+                    length:count
+                },
+                ()=>({
+
+                    x:
+                        Math.random()
+                        * width,
+
+                    y:
+                        Math.random()
+                        * height,
+
+                    r:
+                        Math.random()
+                        * 1.6
+                        + .4,
+
+                    v:
+                        Math.random()
+                        * .35
+                        + .1,
+
+                    a:
+                        Math.random()
+                        * .5
+                        + .15
+
+                })
+            );
+
+    }
+
+
+    resize();
+
+
+    window.addEventListener(
+        "resize",
+        resize
+    );
+
+
+    function tick(){
+
+        ctx.clearRect(
+            0,
+            0,
+            width,
+            height
+        );
+
+
+        particles.forEach(p=>{
+
+            p.y-=p.v;
+
+            p.x+=
+                Math.sin(
+                    p.y/60
+                )*.15;
+
+
+            if(p.y<-5){
+
+                p.y=
+                    height+5;
+
+                p.x=
+                    Math.random()
+                    *width;
+
+            }
+
+
+            ctx.beginPath();
+
+
+            ctx.arc(
+                p.x,
+                p.y,
+                p.r,
+                0,
+                Math.PI*2
+            );
+
+
+            ctx.fillStyle=
+                "rgba(255,205,120,"+
+                p.a+
+                ")";
+
+
+            ctx.fill();
+
+        });
+
+
+        requestAnimationFrame(
+            tick
+        );
+
+    }
+
+
+    tick();
+
+})();
+
 </script>
+
 </body>
 </html>
