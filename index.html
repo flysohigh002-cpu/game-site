@@ -819,12 +819,23 @@ section:not(.features){
 // 圖片載入：有填網址就顯示，沒填（或載入失敗）就保留暗色佔位底圖
 function setImg(box, url, alt){
   if(!url || /^YOUR_/.test(url)) return;
-  const im = new Image();
+  const im = document.createElement("img");
   im.alt = alt || "";
-  im.loading = "lazy";
-  im.onload = () => box.appendChild(im);
+  im.width = 1920;
+  im.height = 1080;
+  im.decoding = "async";
+  im.loading = "eager";
   im.src = url;
+  im.onerror = () => im.remove();
+  box.appendChild(im);
 }
+
+// 先預載三張 Hero 圖，避免手機輪播切換時出現暗色空白。
+HERO_SLIDES.forEach(({img}) => {
+  if(!img || /^YOUR_/.test(img)) return;
+  const preload = new Image();
+  preload.src = img;
+});
 document.querySelectorAll(".logo").forEach(a => {
   const im = a.querySelector(".logo-img"), tx = a.querySelector(".logo-txt");
   if(!SITE_IMAGES.logo || /^YOUR_/.test(SITE_IMAGES.logo)) return;
