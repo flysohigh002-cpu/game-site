@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://flysohigh002-cpu.github.io/game-site/">
 <meta property="og:title" content="榮耀 Online｜線上遊戲平台">
 <meta property="og:description" content="探索線上遊戲、角色扮演、冒險與更多精彩遊戲內容。">
-<meta property="og:image" content="https://flysohigh002-cpu.github.io/game-site//logo.png">
+<meta property="og:image" content="https://flysohigh002-cpu.github.io/game-site/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -43,8 +43,6 @@ const SITE_IMAGES = {
     hero2: "hero2.jpg",
     hero3: "hero3.jpg",
 
-    explore: "explore.jpg",
-
     game1: "game1.jpg",
     game2: "game2.jpg",
     game3: "game3.jpg",
@@ -53,8 +51,8 @@ const SITE_IMAGES = {
     game6: "game6.jpg",
 
     banner: "banner.jpg"
-};
 
+};
 
 // 全站背景影片（選填）：填入 .mp4 網址會循環播放並取代背景圖；留空則不使用
 const BG_VIDEO = "";
@@ -213,9 +211,18 @@ main,footer{position:relative;z-index:2}
 .card-type{display:block}
 .lead{max-width:640px;margin-top:14px;color:var(--mute)}
 
-/* Scroll Reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
-.rv.in{opacity:1;transform:none}
+/* Scroll Reveal：停用，內容固定可見 */
+.rv{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+  transition:none !important;
+}
+.rv.in{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
 
 /* ===== 固定世界背景・天堂風氛圍優化 ===== */
 body{
@@ -402,6 +409,193 @@ section:not(.features){
   html{scroll-behavior:auto}
   .rv{opacity:1;transform:none}
 }
+
+/* =====================================================
+   最終手機版：緊湊、防止大空白
+   ===================================================== */
+@media (max-width:768px){
+
+  section{
+    padding:30px 0;
+  }
+
+  .wrap{
+    width:calc(100% - 28px);
+  }
+
+  /* Hero */
+  .hero{
+    min-height:620px;
+    height:620px;
+    padding-bottom:92px;
+  }
+
+  .hero-body{
+    padding-top:0;
+    padding-bottom:6px;
+  }
+
+  .hero-game{
+    margin-bottom:12px;
+  }
+
+  .hero h1{
+    font-size:clamp(38px,10vw,54px);
+    line-height:1.08;
+  }
+
+  .hero p{
+    margin:14px 0 22px;
+    font-size:15px;
+  }
+
+  .hero-btns{
+    gap:10px;
+  }
+
+  .hero-btns .btn{
+    flex:1;
+    min-height:46px;
+    padding:0 16px;
+  }
+
+  .hero-ctrl{
+    left:14px;
+    right:14px;
+    bottom:26px;
+  }
+
+  /* 熱門遊戲 */
+  #games{
+    padding-top:26px;
+    padding-bottom:28px;
+  }
+
+  #games .sec-head{
+    margin-bottom:18px;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .card-info{
+    padding:15px 17px 17px;
+  }
+
+  .card-name{
+    font-size:21px;
+    line-height:1.35;
+    margin:2px 0 4px;
+  }
+
+  .card-desc{
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:6px;
+  }
+
+  .card-go{
+    min-height:38px;
+    font-size:14px;
+  }
+
+  /* 特色 */
+  .features{
+    padding-top:30px;
+    padding-bottom:30px;
+  }
+
+  .feat-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+    margin-top:22px;
+  }
+
+  .feat,
+  .feat:nth-child(2){
+    border:0;
+    margin:0;
+    padding:0;
+  }
+
+  /* 活動 */
+  #events{
+    padding-top:26px;
+    padding-bottom:26px;
+  }
+
+  .banner{
+    aspect-ratio:16/9;
+    min-height:0;
+  }
+
+  .banner-body{
+    padding:20px;
+  }
+
+  .banner-body h2{
+    font-size:28px;
+  }
+
+  .banner-body p{
+    margin:8px 0 14px;
+    font-size:14px;
+  }
+
+  .banner-body .btn{
+    min-height:42px;
+    padding:0 20px;
+    font-size:14px;
+  }
+
+  /* 探索 */
+  .explore{
+    gap:18px;
+  }
+
+  .explore .ph{
+    aspect-ratio:16/10;
+  }
+
+  .explore p{
+    margin:10px 0 18px;
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  /* 公告 */
+  #news{
+    padding-top:20px;
+    padding-bottom:28px;
+  }
+
+  .news li a{
+    padding:16px 4px;
+  }
+
+  /* Footer */
+  footer{
+    padding:38px 0 22px;
+  }
+
+  /* 固定背景 */
+  .bg-media{
+    inset:0;
+    opacity:.5;
+    animation:none;
+  }
+}
+
+/* 任何情況下都不讓內容因 rv 變透明 */
+.rv,
+.rv.in{
+  opacity:1 !important;
+  visibility:visible !important;
+  transform:none !important;
+}
+
 </style>
 </head>
 <body>
@@ -580,7 +774,7 @@ section:not(.features){
 
   <section style="padding-top:0">
     <div class="wrap explore">
-      <div class="ph rv"><img data-img="explore.jpg" alt="榮耀 Online 遊戲場景" width="1280" height="800" loading="lazy" decoding="async"></div>
+      <div class="ph rv"><img data-img="explore" alt="榮耀 Online 遊戲場景" width="1280" height="800" loading="lazy" decoding="async"></div>
       <div class="rv">
         <h2>探索全新世界</h2>
         <p>進入充滿冒險、電子遊戲區集合全球熱門老虎機與經典機台玩法，包含高人氣拉霸遊戲、累積彩金、免費旋轉等多種模式，帶來高中獎率與刺激體驗。支援手機與電腦隨時開玩，畫面精緻流暢，讓玩家享受最頂級的線上娛樂。無論你是新手還是資深玩家，都能在這裡找到適合自己的遊戲，輕鬆體驗高回報與快節奏的娛樂快感。角色與故事的線上遊戲世界。在榮耀 Online，你可以選擇喜歡的遊戲類型，結識其他玩家，一起完成任務、挑戰副本與參加限定活動。</p>
@@ -730,9 +924,8 @@ tabBtns.forEach(btn => {
   });
 });
 
-// Scroll Reveal
-const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12});
-document.querySelectorAll(".rv").forEach(el => io.observe(el));
+// Scroll Reveal 已停用：所有內容直接顯示。
+document.querySelectorAll(".rv").forEach(el => el.classList.add("in"));
 </script>
 </body>
 </html>
