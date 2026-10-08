@@ -274,6 +274,109 @@ header.solid{background:rgba(20,12,7,.92)}
   .conclusion .lead2{font-size:15px;line-height:1.85}
 }
 
+
+
+/* ===== 首頁・遊戲攻略文章預覽區 ===== */
+.guides-preview{
+  padding-top:78px;
+  padding-bottom:78px;
+  background:linear-gradient(180deg,rgba(26,16,10,.72),rgba(14,8,5,.82));
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.guides-preview .sec-head{
+  align-items:end;
+  margin-bottom:28px;
+}
+.guides-preview .guide-more{
+  flex:0 0 auto;
+}
+.guide-preview-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.guide-preview-card{
+  display:block;
+  position:relative;
+  overflow:hidden;
+  background:rgba(30,19,12,.9);
+  border:1px solid var(--line);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+.guide-preview-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(230,192,113,.68);
+  box-shadow:0 20px 46px rgba(0,0,0,.52),0 0 0 1px rgba(230,192,113,.18);
+}
+.guide-preview-card:focus-visible{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+}
+.guide-preview-image{
+  aspect-ratio:16/9;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#2c1e12,#120b06 60%,#241608);
+}
+.guide-preview-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.guide-preview-card:hover .guide-preview-image img{
+  transform:scale(1.06);
+}
+.guide-preview-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 45%,rgba(12,7,4,.72));
+  pointer-events:none;
+}
+.guide-preview-info{
+  padding:17px 18px 20px;
+}
+.guide-preview-tag{
+  display:block;
+  color:var(--accent);
+  font-size:12px;
+  letter-spacing:.12em;
+  margin-bottom:5px;
+}
+.guide-preview-title{
+  font-family:var(--serif);
+  font-size:19px;
+  line-height:1.45;
+  font-weight:900;
+}
+.guide-preview-link{
+  display:inline-flex;
+  margin-top:12px;
+  color:var(--text);
+  font-size:14px;
+  border-bottom:1px solid var(--accent);
+  padding-bottom:2px;
+}
+@media (max-width:1024px){
+  .guide-preview-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:768px){
+  .guides-preview{padding-top:32px;padding-bottom:34px;}
+  .guides-preview .sec-head{margin-bottom:18px;align-items:flex-start;}
+  .guides-preview .sec-head h2{font-size:28px;}
+  .guide-more{width:100%;}
+  .guide-more .btn{width:100%;min-height:42px;}
+  .guide-preview-grid{grid-template-columns:1fr;gap:12px;}
+  .guide-preview-card{display:grid;grid-template-columns:40% 60%;min-height:124px;}
+  .guide-preview-image{aspect-ratio:auto;min-height:124px;height:100%;}
+  .guide-preview-info{padding:14px 15px 15px;display:flex;flex-direction:column;justify-content:center;}
+  .guide-preview-title{font-size:17px;line-height:1.45;}
+  .guide-preview-tag{font-size:11px;margin-bottom:4px;}
+  .guide-preview-link{margin-top:8px;font-size:13px;}
+}
+
 /* Footer */
 footer{background:rgba(16,10,6,.92);border-top:1px solid var(--line);padding:64px 0 32px}
 .foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
@@ -709,7 +812,7 @@ section:not(.features){
 
     <nav class="menu" aria-label="主選單">
       <a href="#top">首頁</a>
-      <a href="game-guides.html" target="_blank" rel="noopener">遊戲攻略</a>
+      <a href="game-guides.html">遊戲攻略</a>
       <a href="#hot">熱門遊戲</a>
       <a href="#events">活動</a>
       <a href="#news">公告</a>
@@ -733,7 +836,7 @@ section:not(.features){
   <!-- 手機版選單 -->
   <div class="drawer" id="drawer">
     <a class="l" href="#top">首頁</a>
-    <a class="l" href="game-guides.html" target="_blank" rel="noopener">遊戲攻略</a>
+    <a class="l" href="game-guides.html">遊戲攻略</a>
     <a class="l" href="#hot">熱門遊戲</a>
     <a class="l" href="#events">活動</a>
     <a class="l" href="#news">公告</a>
@@ -837,6 +940,68 @@ section:not(.features){
             <h3 class="card-name">財神賀歲</h3>
             <p class="card-desc">榮耀 Online2026多人遊戲推薦：９款經典聚會必玩多人遊戲推薦一次看，讓朋友聚會不再冷場！組隊挑戰副本，打造專屬於你的角色。</p>
             <span class="card-go">開始遊戲</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 遊戲攻略文章預覽 ===== -->
+  <section id="guide-preview" class="guides-preview" aria-labelledby="guide-preview-title">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <h2 id="guide-preview-title">遊戲攻略</h2>
+          <p class="lead">精選最新遊戲攻略文章，點擊任一文章卡片即可進入完整遊戲攻略頁面。</p>
+        </div>
+        <div class="guide-more">
+          <a class="btn" href="game-guides.html">查看全部攻略</a>
+        </div>
+      </div>
+
+      <div class="guide-preview-grid">
+        <a class="guide-preview-card rv" href="game-guides.html" aria-label="查看 2026 世界盃進球榜遊戲攻略文章">
+          <div class="guide-preview-image">
+            <img src="guide1.jpg" alt="2026 世界盃進球榜遊戲攻略文章封面" width="1280" height="720" loading="lazy" decoding="async">
+          </div>
+          <div class="guide-preview-info">
+            <span class="guide-preview-tag">遊戲攻略 01</span>
+            <h3 class="guide-preview-title">2026 世界盃進球榜：金靴獎最新射手排名</h3>
+            <span class="guide-preview-link">閱讀攻略 →</span>
+          </div>
+        </a>
+
+        <a class="guide-preview-card rv" href="game-guides.html" aria-label="查看 2026 世界盃助攻榜遊戲攻略文章">
+          <div class="guide-preview-image">
+            <img src="guide2.jpg" alt="2026 世界盃助攻榜遊戲攻略文章封面" width="1280" height="720" loading="lazy" decoding="async">
+          </div>
+          <div class="guide-preview-info">
+            <span class="guide-preview-tag">遊戲攻略 02</span>
+            <h3 class="guide-preview-title">2026 世界盃助攻榜：最佳助攻手排名</h3>
+            <span class="guide-preview-link">閱讀攻略 →</span>
+          </div>
+        </a>
+
+        <a class="guide-preview-card rv" href="game-guides.html" aria-label="查看 2026 世界盃賽事焦點遊戲攻略文章">
+          <div class="guide-preview-image">
+            <img src="guide3.jpg" alt="2026 世界盃賽事焦點遊戲攻略文章封面" width="1280" height="720" loading="lazy" decoding="async">
+          </div>
+          <div class="guide-preview-info">
+            <span class="guide-preview-tag">遊戲攻略 03</span>
+            <h3 class="guide-preview-title">2026 世界盃賽事焦點：熱門球隊與觀戰重點</h3>
+            <span class="guide-preview-link">閱讀攻略 →</span>
+          </div>
+        </a>
+
+        <a class="guide-preview-card rv" href="game-guides.html" aria-label="查看 2026 世界盃球員攻略文章">
+          <div class="guide-preview-image">
+            <img src="guide4.jpg" alt="2026 世界盃球員攻略文章封面" width="1280" height="720" loading="lazy" decoding="async">
+          </div>
+          <div class="guide-preview-info">
+            <span class="guide-preview-tag">遊戲攻略 04</span>
+            <h3 class="guide-preview-title">2026 世界盃球員攻略：快速掌握關鍵數據</h3>
+            <span class="guide-preview-link">閱讀攻略 →</span>
           </div>
         </a>
       </div>
@@ -1096,7 +1261,7 @@ section:not(.features){
         </div>
       </div>
       <nav class="foot-links" aria-label="頁尾連結">
-        <a href="#">關於平台</a><a href="#games">遊戲</a><a href="#events">活動</a><a href="#recommendation">台灣推薦</a><a href="#faq">FAQ</a><a href="#responsible-title">責任娛樂</a><a href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a><a href="disclaimer.html" target="_blank" rel="noopener">免責聲明</a><a href="terms.html" target="_blank" rel="noopener">使用條款</a><a href="privacy.html" target="_blank" rel="noopener">隱私政策</a>
+        <a href="#">關於平台</a><a href="game-guides.html">遊戲攻略</a><a href="#events">活動</a><a href="#recommendation">台灣推薦</a><a href="#faq">FAQ</a><a href="#responsible-title">責任娛樂</a><a href="https://lin.ee/5fEfP6L" target="_blank" rel="noopener">客服</a><a href="disclaimer.html" target="_blank" rel="noopener">免責聲明</a><a href="terms.html" target="_blank" rel="noopener">使用條款</a><a href="privacy.html" target="_blank" rel="noopener">隱私政策</a>
       </nav>
     </div>
     <div class="copy">© 2026 榮耀 Online</div>
