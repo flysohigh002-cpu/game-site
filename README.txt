@@ -1,17 +1,13 @@
-榮耀 Online SEO 批次更新檔案
+榮耀 Online｜文章內容與攻略列表修正版
 
-包含以下 15 個 HTML 頁面：
-- index.html
-- game-guides.html
-- guide1.html 到 guide10.html
-- privacy.html、terms.html、disclaimer.html
+本包包含：
+1. article-content.js：集中管理 guide1 至 guide10 的 lead 與 body。
+2. game-guides.html：修正攻略列表十張卡片的標題、圖片替代文字、無障礙標籤及頁面描述，清除舊世界盃範例文字。
 
-已統一 canonical、Open Graph、Twitter Card 與自訂網域網址。原有頁面正文與版面保留。
-
-更新 GitHub 的方式：
+更新方式：
 1. 解壓縮此 ZIP。
-2. 開啟 GitHub 專案，按 Add file → Upload files。
-3. 一次選取解壓縮資料夾裡的所有 .html 檔案（不要把 README 當網站頁面上傳也可以）。
-4. 確認檔名與網站根目錄中的檔名相同，再按 Commit changes。
+2. 將這兩個檔案上傳到 GitHub 專案根目錄，覆蓋同名檔案。
+3. 按 Commit changes。
+4. 網站更新後，用 Ctrl+F5 強制重新整理，檢查遊戲攻略列表與任意 guide 頁面。
 
-注意：這包只更新 HTML，不包含或覆蓋圖片等其他網站資源。
+備註：保留了頁面原有樣式、導覽、圖片檔名、瀏覽數及 article-titles.js / sync-article-titles.js 載入方式。文章中的遊戲數據仍以各遊戲正式版本及官方規則為準。
