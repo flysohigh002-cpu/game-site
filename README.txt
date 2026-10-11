@@ -1,13 +1,14 @@
-榮耀 Online｜文章內容與攻略列表修正版
+榮耀 Online｜Google Analytics 4 安裝更新包
 
-本包包含：
-1. article-content.js：集中管理 guide1 至 guide10 的 lead 與 body。
-2. game-guides.html：修正攻略列表十張卡片的標題、圖片替代文字、無障礙標籤及頁面描述，清除舊世界盃範例文字。
+本更新包包含 15 個 HTML 頁面：首頁、攻略列表、guide1～guide10、隱私權政策、使用條款與免責聲明。
+已將 Google tag（GA4 ID：G-WS5YNQ40HY）加入各頁面的 <head>，並在隱私權政策新增網站分析工具說明。
+攻略列表頁使用已修正文章標題的 game-guides.html。
 
-更新方式：
+安裝方式：
 1. 解壓縮此 ZIP。
-2. 將這兩個檔案上傳到 GitHub 專案根目錄，覆蓋同名檔案。
+2. 將其中 15 個 HTML 檔案上傳到 GitHub 專案根目錄，覆蓋同名檔案。
 3. 按 Commit changes。
-4. 網站更新後，用 Ctrl+F5 強制重新整理，檢查遊戲攻略列表與任意 guide 頁面。
+4. 部署完成後開啟網站並用 Ctrl+F5 重新整理。
+5. 在 Google Analytics 的「即時」報表查看是否出現訪客活動；資料顯示可能需要一些時間。
 
-備註：保留了頁面原有樣式、導覽、圖片檔名、瀏覽數及 article-titles.js / sync-article-titles.js 載入方式。文章中的遊戲數據仍以各遊戲正式版本及官方規則為準。
+注意：本包只含 HTML 更新檔，不含圖片或 JavaScript 集中管理檔，這些現有網站資源請保留。terms.html 是從先前提供的網站版本納入，因本次 ZIP 未包含該檔案。
